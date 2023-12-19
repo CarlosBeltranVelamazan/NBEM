@@ -21,7 +21,7 @@ The code contains Python scripts to generate the model; no specific files need t
 A script named main.py has been created to handle the entire automated process in Python for generating the national-scale Building Energy Model based on Energy Performance Certificates in European countries. The main.py script contains the parameters and a recommended configuration for generating the model. Internal scripts can be modified to obtain different results if desired.
 
 # Project info
-This tool was developed at the **Built4Life Lab**, research group from the **University of Zaragoza-I3A**, within the research project named LocalRegen, funded by the Ministry of Science and Innovation of Spain, grant number PID2019-104871RB-C21/AEI/10.13039/501100011033 and by GOBIERNO DE ARAGÓN, grant number T37_23R: Built4Life Lab.
+This tool was developed at the **Built4Life Lab**, research group from the **University of Zaragoza-I3A**, within the research project named **LocalRegen**, funded by the Ministry of Science and Innovation of Spain, grant number PID2019-104871RB-C21/AEI/10.13039/501100011033 and by GOBIERNO DE ARAGÓN, grant number T37_23R: Built4Life Lab.
 Website: http://www.localregen.net/
 
 * Main Contact: Belinda López-Mesa, Built4Life Lab-I3A, University of Zaragoza-I3A, 50108 Zaragoza, Spain (belinda@unizar.es)
