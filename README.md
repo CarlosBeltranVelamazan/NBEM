@@ -29,6 +29,9 @@ Website: http://www.localregen.net/
   - Marta Monzón-Chavarrías, Built4Life Lab-I3A, University of Zaragoza-I3A, 50108 Zaragoza, Spain (monzonch@unizar.es)
   - Carlos Beltrán-Velamazán, Built4Life Lab-I3A, University of Zaragoza-I3A, 50108 Zaragoza, Spain (monzonch@unizar.es)
   - Añadir
+ 
+![Logo LocalRegen](https://proyectolocalregen.files.wordpress.com/2021/04/logo-localregen-color.png?w=848)
+
 
 ## Additional info: 
 The code is available under the terms of the MIT License. Permitted with proper citation: Unrestricted use, distribution, and reproduction in any medium.
