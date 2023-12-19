@@ -31,6 +31,4 @@ Website: http://www.localregen.net/
   - Añadir
 
 ## Additional info: 
-This is an open access article distributed under the Creative Commons Attribution License which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
-
-
+The code is available under the terms of the MIT License. Permitted with proper citation: Unrestricted use, distribution, and reproduction in any medium.
