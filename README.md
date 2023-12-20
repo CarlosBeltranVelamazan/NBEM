@@ -4,11 +4,12 @@ Code to generate National-scale Building Energy Models based on Energy Performan
 ## Description:
 The code in this repository is designed to generate a National-scale Urban Building Energy Model for Spain. The model includes all buildings in Spain, with georeferenced data from the INSPIRE Cadastre and alphanumeric data from the Spanish Cadastre, as well as all energy data obtained from publicly available Energy Performance Certificates (EPCs) in Spain.
 
-The code in this repository is part of the paper “A new approach for national-scale Building Energy Models based on Energy Performance Certificates in European countries: the case of Spain”, published in Heliyon in 2023 and written by Carlos Beltran-Velamazan, Marta Monzón-Chavarrías and Belinda López-Mesa from the University of Zaragoza (Spain).
+The code in this repository is part of the paper “A new approach for national-scale Building Energy Models based on Energy Performance Certificates in European countries: the case of Spain”, published in Heliyon in 2023 and written by Carlos Beltran-Velamazan, Marta Monzón-Chavarrías and Belinda López-Mesa from the Built4Life Lab, University of Zaragoza (Spain).
 There the methodology is explained and developed and the results obtained are shown. The article can be found in the following link https:
+If you use this tool please cite the following paper:
 
 ## Project Status:
-Released, development ongoing.
+Released, development ongoing. Currently, we are fine-tuning the code for better comprehension, and we will be releasing the complete updated code as soon as possible.
 For any suggestions, questions, or inquiries about the code, its usage, or the model, please feel free to send a mail to cbeltran@unizar.es
 
 ## Data input needed:
@@ -24,7 +25,7 @@ A script named main.py has been created to handle the entire automated process i
 This tool was developed at the **Built4Life Lab**, research group from the **University of Zaragoza-I3A**, within the research project named **LocalRegen**, funded by the Ministry of Science and Innovation of Spain, grant number PID2019-104871RB-C21/AEI/10.13039/501100011033 and by GOBIERNO DE ARAGÓN, grant number T37_23R: Built4Life Lab.
 Website: http://www.localregen.net/
 
-* Main Contact: Belinda López-Mesa, Built4Life Lab-I3A, University of Zaragoza-I3A, 50108 Zaragoza, Spain (belinda@unizar.es)
+* Main Contact: Belinda López-Mesa, Built4Life Lab, University of Zaragoza-I3A, 50108 Zaragoza, Spain (belinda@unizar.es)
 
 <p align="center">
   <img src="https://proyectolocalregen.files.wordpress.com/2021/04/logo-localregen-color.png?w=848" width="350" title="LocalRegen">
