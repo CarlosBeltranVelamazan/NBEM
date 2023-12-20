@@ -25,10 +25,6 @@ This tool was developed at the **Built4Life Lab**, research group from the **Uni
 Website: http://www.localregen.net/
 
 * Main Contact: Belinda López-Mesa, Built4Life Lab-I3A, University of Zaragoza-I3A, 50108 Zaragoza, Spain (belinda@unizar.es)
-* Contributors:
-  - Marta Monzón-Chavarrías, Built4Life Lab-I3A, University of Zaragoza-I3A, 50108 Zaragoza, Spain (monzonch@unizar.es)
-  - Carlos Beltrán-Velamazán, Built4Life Lab-I3A, University of Zaragoza-I3A, 50108 Zaragoza, Spain (monzonch@unizar.es)
-  - Añadir
 
 <p align="center">
   <img src="https://proyectolocalregen.files.wordpress.com/2021/04/logo-localregen-color.png?w=848" width="350" title="LocalRegen">
