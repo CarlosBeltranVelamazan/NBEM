@@ -16,7 +16,7 @@ For any suggestions, questions, or inquiries about the code, its usage, or the m
 Energy Performance Certificates (EPCs), INSPIRE Cadastre files, and Alphanumeric Cadastre files. EPC data and INSPIRE Cadastre files can be downloaded automatically by the repository code, while alphanumeric cadastral data must be manually downloaded from the cadastral electronic headquarters province by province (see the notes in the main.py file for the respective sections).
 
 ## How to install: 
-The code contains Python scripts to generate the model; no specific files need to be installed. Certain libraries such as Pandas, Geopandas, Polars, and Geopolars are required. See the details in the main.py file of the code.
+The code contains Python scripts to generate the model; no specific files need to be installed. Certain libraries such as Pandas, Geopandas, Polars, and Geopolars are required. See requirements.txt for the listing and versions.
 
 ## How to use: 
 A script named main.py has been created to handle the entire automated process in Python for generating the national-scale Building Energy Model based on Energy Performance Certificates in European countries. The main.py script contains the parameters and a recommended configuration for generating the model. Internal scripts can be modified to obtain different results if desired.
