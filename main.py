@@ -18,6 +18,7 @@ As the process is executed, folders will be created with the information generat
  Data management and Model generation steps:
       - A.1: Management of EPCs in python
       - A.2: Alphanumeric cadastre
+      - A.3: INSPIRE cadastre
 
                                                         HOW TO MANAGE THE MODEL
 
