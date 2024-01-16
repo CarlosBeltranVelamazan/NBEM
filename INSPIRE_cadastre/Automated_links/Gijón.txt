@@ -1,0 +1,5 @@
+http://www.catastro.minhap.es/INSPIRE/Buildings/52/52014-CARREÑO/A.ES.SDGC.BU.52014.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/52/52019-COLUNGA/A.ES.SDGC.BU.52019.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/52/52024-GIJON/A.ES.SDGC.BU.52024.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/52/52025-GOZON/A.ES.SDGC.BU.52025.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/52/52076-VILLAVICIOSA/A.ES.SDGC.BU.52076.zip
