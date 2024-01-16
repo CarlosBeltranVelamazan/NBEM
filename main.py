@@ -58,7 +58,29 @@ switch_CCAA = {
     19: 'Melilla',
     }
 
- # Step A.1, Management of EPC in python - To use this step mark the variable Step_A_1 as True and provide the rest of the information required. Please see notes below.
+# Step A.0, Create folders to store the data - Just the first time, will create the structure of folders to or contain the input data or the steps or the output
+                                                                          # The neccesary folders are:
+                                                                          # Internal scripts: Contains the code to generate the model
+folder_read_EPC = r'Downloaded_EPC_databases'                             # The folder where the files of the EPCs will be read from and if the download option is chosen the EPCs files will be saved 
+folder_save_EPC_modificed = r'Modified_EPC_Databases'                     # The folder where the generated files will be saved
+folder_read_Alphanumeric_cadastre = r'Alphanumeric_cadastre'              # The folder to store the zip files from the Alphanumeric Cadastre
+folder_INSPIRE = r'INSPIRE_cadastre'                                      # The folder with all the data and models from the INSPIRE Cadastre
+folder_txt_INSPIRE = r'INSPIRE_cadastre\Original_txt_links'               # Additional feature: It allows updating the download links for the Inspire cadastre that will be used by the algorithm, contains the raw text of the webs with the links.
+folder_INSPIRE_links = r'INSPIRE_cadastre\Automated_links'                # Contains the txt with the links to the INSPIRE Cadastre ready to download
+folder_download_INSPIRE_zips = r'INSPIRE_cadastre\INSPIRE_files'          # Contains the downloaded INSPIRE Cadastre zips
+
+
+Step_A_0 = True     # Create folders to store the data
+if Step_A_0 == True:
+    import os
+    os.makedirs(folder_read_EPC, exist_ok=True)
+    os.makedirs(folder_save_EPC_modificed, exist_ok=True)
+    os.makedirs(folder_read_Alphanumeric_cadastre, exist_ok=True)
+    os.makedirs(folder_txt_INSPIRE, exist_ok=True)
+    os.makedirs(folder_INSPIRE_links, exist_ok=True)
+    os.makedirs(folder_download_INSPIRE_zips, exist_ok=True)
+
+# Step A.1, Management of EPC in python - To use this step mark the variable Step_A_1 as True and provide the rest of the information required. Please see notes below.
 Step_A_1 = False
 if Step_A_1 == True:
     from Internal_scripts import A_Script_clave
@@ -76,10 +98,9 @@ if Step_A_1 == True:
     Join_DDBB_Spain = True                                  # Join all the EPCs DDBB in a single database at national level (True or False) (necessary for the following steps)
     Divide_into_buildings_and_buildings_units = True        # Result Step A.1. Divide the dataset into building or real estate certificates (14 or 20 digits of cadastral reference) (True or False)
 
-    folder_read_files = 'BBDD_Descargadas'                  # The folder where the files of the EPCs will be read from and if the download option is chosen the EPCs files will be saved 
-    folder_save_files = 'BBDD_Modificadas'                  # The folder where the generated files will be saved
 
-    A_Script_clave.EPCs (folder_read_files, folder_save_files, CCAA, Download_EPCs_DDBB, Homogenize_DDBB, Filter_by_date, Filter_date, Certificates_date_used, Divide_by_use_EPCs, Use_EPCs, Detect_errors, 
+
+    A_Script_clave.EPCs (folder_read_EPC, folder_save_EPC_modificed, CCAA, Download_EPCs_DDBB, Homogenize_DDBB, Filter_by_date, Filter_date, Certificates_date_used, Divide_by_use_EPCs, Use_EPCs, Detect_errors, 
                   Join_by_RefCat, EPCs_joined_by_RefCat, Join_DDBB_Spain, Divide_into_buildings_and_buildings_units)
 
     """ 
@@ -98,8 +119,8 @@ if Step_A_1 == True:
                 EPCs_joined_by_RefCat = 0                               # To use the single EPCs data (0), or the data grouped by building (grouped by Cadastral Reference) (1) (*)
                 Join_DDBB_Spain = True                                  # Join all the EPCs DDBB in a single database at national level (True or False) (necessary for the following steps)
                 Divide_into_buildings_and_buildings_units = True        # Result Step A.1. Divide the dataset into building or real estate certificates (14 or 20 digits of cadastral reference) (True or False)
-                folder_read_files = 'BBDD_Descargadas'                  # The folder where the files of the EPCs will be read from and if the download option is chosen the EPCs files will be saved 
-                folder_save_files = 'BBDD_Modificadas'                  # The folder where the generated files will be saved
+                folder_read_EPC = 'Downloaded_EPC_databases'                    # The folder where the files of the EPCs will be read from and if the download option is chosen the EPCs files will be saved 
+                folder_save_EPC_modificed = 'Modified_EPC_Databases'          # The folder where the generated files will be saved
         
         2 - (*) In the final version of the cbc-NBEM these steps are not used, however, as they may be useful, the option of generating the data using these functionalities has been maintained. 
             To generate the cbc-NBEM it is recommended to set the values marked with (*) to False or 0 as appropriate.
@@ -139,7 +160,7 @@ if Step_A_1 == True:
             The folders that contains those intermediate files that can be deleted are: 'BBDD_Descargadas' ('Downloaded DDBB'), 'BBDD_Modificadas' ('Standarized DDBB'), 'Separados_por_fecha' ('Divided by the data selected'), 'BBDD_ErroresEliminados' ('Errors filtered'). (depending on the configuration chosen, other folders may appear that are also temporary files)
     """
 
- # Step A.2, Alphanumeric cadastre - To use this step mark the variable Step_A_2 as True and provide the rest of the information required. Please see notes below.
+# Step A.2, Alphanumeric cadastre - To use this step mark the variable Step_A_2 as True and provide the rest of the information required. Please see notes below.
 Step_A_2 = False
 if Step_A_2 == True:
     from Internal_scripts import E_Script_clave
@@ -215,8 +236,6 @@ if Step_A_2 == True:
     # https://www.sedecatastro.gob.es/Accesos/SECAccDescargaDatos.aspx
     # This step is not automated but can be downloaded province by province from the website itself.
     # The alphanumeric cadastre files in zip format must be saved in the folder: Alphanumeric_cadastre (or define the path to the files)
-    folder_read_files = 'Alphanumeric_cadastre'        # The folder to store the zip files
-    os.makedirs(folder_read_files, exist_ok=True)      # Create the previous folder in case it does not exist
 
     # After downloading the files to the folder, this script automatically unzips the zip files and sorts the documents it contains.  (necessary for the following steps)
     Extract_ZIP_files = True
@@ -230,14 +249,14 @@ if Step_A_2 == True:
 
     # Step A.2.3. Done automatically
 
-    E_Script_clave.Alphanumeric_cadastre (PROV, folder_read_files, Extract_ZIP_files, building_scale_cadastre, building_unit_scale_cadastre)
+    E_Script_clave.Alphanumeric_cadastre (PROV, folder_read_Alphanumeric_cadastre, Extract_ZIP_files, building_scale_cadastre, building_unit_scale_cadastre)
 
     """ 
     Notes about the Step A.2:
 
         1 - To generate the cbc-NBEM the recommended configuration is:
                 PROV = 0
-                folder_read_files = 'Alphanumeric_cadastre'
+                folder_read_Alphanumeric_cadastre = 'Alphanumeric_cadastre'
                 Extract_ZIP_files = True           # (just once)          # This script automatically unzips the zip files and sorts the documents it contains
                 building_scale_cadastre = True                            # Process the CAT files to obtain the information by building at the province scale
                 building_unit_scale_cadastre = True                       # Process the CAT files to obtain the information by building unit at the province scale
@@ -253,14 +272,14 @@ if Step_A_2 == True:
             "Edificios_España_Completos" ("Buildings in Spain completed") and "Edificios_España_Completos_escala_BI" ("Buildings units in Spain completed").
     """
 
- # Step A.3, INSPIRE cadastre - To use this step mark the variable Step_A_3 as True and provide the rest of the information required. Please see notes below.
+# Step A.3, INSPIRE cadastre - To use this step mark the variable Step_A_3 as True and provide the rest of the information required. Please see notes below.
 Step_A_3 = True
 if Step_A_3 == True:
     # This step will generate a GIS map with all the buildings in Spain with the information contained in the INSPIRE cadastre. This information is provided at the building scale (14-digit cadastral reference).
 
-    # Step A.3.1. Download the INSPIRE cadastre data. This step is divided in three parts:
+    # Step A.3.1. Download the INSPIRE cadastre data. This step is divided in four parts:
 
-        # Part 1: Create the download links that will be automated for the massive download of data
+        # Create the download links that will be automated for the massive download of data
             # The INSPIRE cadastre files can be downloaded from the links of the ATOM download service (https://www.catastro.minhap.es/webinspire/index.html), 
             # which can be found at: https://www.catastro.minhafp.es/INSPIRE/buildings/ES.SDGC.BU.atom.xml?_gl=1*1uznbac*_ga*MTI0MTg5ODY0OC4xNjc2OTc0NTg0*_ga_JG5LDK2LGX*MTY5MzU1NjU5NS4xMC4xLjE2OTM1NTY2NDMuMC4wLjA.
             # This website contains a link to an xml of each province of Spain, which contains information on all the municipalities in the province in a zip file by municipality
@@ -268,45 +287,69 @@ if Step_A_3 == True:
 
             # If you prefer, the links already generated for the download have been added to this file, folder 'INSPIRE_cadastre\Automated_links' so that it is not necessary to perform the part 1 and 2 in this step. (Links updated as of 2023).
 
-            # To generate the updated links if preferred is necessary to enter each xml of each province and copy and paste the content into a txt selected from the first http link (avoiding the first two header lines).
+        # Part 1: (Optional) Update the txt links
+            # To generate the updated links if preferred just copy the content of the web of the province including the links with the .zip and the code will clean everything is not the url to download the files
             # As a recommendation, it is advisable to save each txt with the name of the province it contains for easier handle.
+            # An additional file will be created containing the number of excepted files downloaded per region in the next step, to ensure that all files have been downloaded. 
+    
+    encoding_txt = 'utf-8'  # As a recommendation, use 'utf-8', in some cases also 'latin-1' is useful. There are some problems with spanish and catalan letters in the links.
+    Step_A_3_1_Part_1 = False
+    if Step_A_3_1_Part_1  == True:
+        from Internal_scripts.B_Scripts_Catastro_INSPIRE import Update_download_links
+        Update_download_links.Automate_links (folder_txt_INSPIRE, folder_INSPIRE_links, encoding_txt)
 
-        # Part 2: Automate the links for the massive download of data
-            # This step generates some txt with the links prepared for downloading all the zip files of each province, to do this it solves some character problems and adds the command @echo off and start to the txt.
-            # If you prefer, the links already generated for the download have been added to this file, folder 'INSPIRE_cadastre\Automated_links' so that it is not necessary to perform the part 1 and 2 in this step. (Links updated as of 2023).
-            # This step also generates one folder per txt file (one folder by province) so it's easier to organize files after bulk download
-    Step_A_3_1_Part_2 = True
-    if Step_A_3_1_Part_2  == True:
-        folder_read_files = 'INSPIRE_cadastre\Original_txt_links'              # The folder to store the txt files
-        import os
-        os.makedirs(folder_read_files, exist_ok=True)                    # Create the previous folder in case it does not exist
-        from Internal_scripts.B_Scripts_Catastro_INSPIRE import Codigo_crear_links_descarga
-        from Internal_scripts.B_Scripts_Catastro_INSPIRE import Crea_carpetas_por_provincia
-        Codigo_crear_links_descarga.Automate_links (folder_read_files)
-        Crea_carpetas_por_provincia.Create_folders (folder_read_files)
-
-        # Part 3: Bulk download of zips by province
-            # Although there are several ways to execute this process, the most direct is to copy the content of the txt and execute it in the Command Prompt (cmd).
+        # Part 2: Bulk download of zips by province
+            # This code will read the txt files with the url to the INSPIRE zip files and download them
             # This will start the bulk download of all the zip files linked in the txt
-            # It is recommended to save the files in the province's folder created previously to improve information management.
+            # This step also generates one folder per txt file (one folder by province) so it's easier to organize files after bulk download
+            # The preceding script will also produce a file indicating the expected number of files for each province's folder. Kindly verify that all downloads have been successful.
+            # Additionally, in the console, it will display whether each link has been downloaded successfully or the download error.
+        
+    Step_A_3_1_Part_2 = False
+    if Step_A_3_1_Part_2  == True:
+        from Internal_scripts.B_Scripts_Catastro_INSPIRE import Download_INSPIRE_files
+        Download_INSPIRE_files.Download_files (folder_INSPIRE_links, folder_download_INSPIRE_zips, encoding_txt)
 
+        # Part 3: Unzip the data. The ZIP files for each province are being decompressed.
+    Step_A_3_1_Part_3 = False
+    if Step_A_3_1_Part_3  == True:
+        from Internal_scripts.B_Scripts_Catastro_INSPIRE import Unzip_INSPIRE
+        Unzip_INSPIRE.Unzip (folder_download_INSPIRE_zips)
+
+        # Part 4: Delete the files we do not wish to keep.
+            # The uncompressed information takes up a lot of space, that's why, since we are only going to use the 'building.gml' layer, it is recommended to delete the unused layers (buildingpart, otherconstruction, and the XML).
+    Step_A_3_1_Part_4 = False
+    if Step_A_3_1_Part_4  == True:
+        from Internal_scripts.B_Scripts_Catastro_INSPIRE import Delete_buildingpart_and_other_constructions
+        Delete_buildingpart_and_other_constructions.Delete_non_used_files (folder_download_INSPIRE_zips)
+
+    # Step A.3.2. Merge the files into a single geoparquet file
+            # If preferred, this step can be done in QGIS using the Merge Vector Layers tool.
+    Step_A_3_2 = True
+    if Step_A_3_2  == True:
+        Coordinate_Reference_System = 'EPSG:25830'          # The standard crs in Spain is ETRS89 / UTM Zone 30N, EPSG:25830. Part of the info is on 'ETRS89 / UTM zone 31N', 'ETRS89 / UTM zone 29N' and REGCAN95 for the Cannary Islands and must be transformed into a common crs.
+        drop_duplicates = True                              # At times, the cadastral data may include duplicated buildings; it is advisable to treat them as errors and remove them. This process will eliminate all buildings with two or more entries sharing the same cadastral reference (14 digits).
+        from Internal_scripts.B_Scripts_Catastro_INSPIRE import Create_GIS_buildings_map
+        Create_GIS_buildings_map.Merge_files (folder_download_INSPIRE_zips, folder_INSPIRE, Coordinate_Reference_System, drop_duplicates)
 
     """ 
-    Notes about the Step A.2:
+    Notes about the Step A.3:
 
-        1 - To generate the cbc-NBEM the recommended configuration is:
-                PROV = 0
-                folder_read_files = 'Alphanumeric_cadastre'
-                Extract_ZIP_files = True           # (just once)          # This script automatically unzips the zip files and sorts the documents it contains
-                building_scale_cadastre = True                            # Process the CAT files to obtain the information by building at the province scale
-                building_unit_scale_cadastre = True                       # Process the CAT files to obtain the information by building unit at the province scale
+        1 - To generate the model the recommended configuration is:
+                encoding_txt = 'utf-8'
+                Step_A_3_1_Part_1 = True
+                Step_A_3_1_Part_2 = True
+                Step_A_3_1_Part_3 = True
+                Step_A_3_1_Part_4 = True
+                Step_A_3_2 = True
+                Coordinate_Reference_System = 'EPSG:25830'
+                drop_duplicates = True
 
-        2 - During the execution of the code, several print commands have been written that will appear, they are written in Spanish, in general they offer information about the process or some minor notes about what is being generated.
+        2 - During the execution of the code, several print commands have been written that will appear, they offer information about the download process or some minor notes about what is being generated.
 
-        3 - As happen in the aphanumeric cadastre the data can be downloaded at province scale, in case to prefer use a single or several provincies just use those links to the download.
+        3 - In case to prefer use a single or several provincies just move the rest of the txt links out of the folders.
         
+        4 - Output: A final file is generated, with the GIS map with all the building in the INSPIRE Spanish Cadastre named GIS_INSPIRE_Buildings.parquet in the INSPIRE folder. This is a geoparquet file and can be opened and modified in QGIS or ArcGIS if desired.
         """
-    
 
-
-
+print ('All active steps have been completed.')
