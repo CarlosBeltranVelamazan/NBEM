@@ -53,6 +53,7 @@ The code is available under the terms of the MIT License. Permitted with proper 
 </p>
 Figure 3: Flowchart of the specific methodology to build the national-scale EPC-based UBEM for the case of Spain.
 
+
 Figure 4-5: Some results that can be found in the paper: 4- Number and percentage of EPCs, number and percentage of certified building units, certified area and percentage of certified area, and number and percentage of complete certified buildings, per energy class and use. 5- National-scale EPC-based UBEM showing, all the buildings in the model (7a), and, the buildings with at least one EPC (7b). 
 
 Figure 6-7: Model visualization: 6- Non-renewable primary energy consumption and CO2 emissions of Spain's building stock per m2, climate zone and year of construction. 7- Buildings of the city centre of Barcelona ranked by NRPEC per square meter. 
