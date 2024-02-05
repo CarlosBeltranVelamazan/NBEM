@@ -43,6 +43,7 @@ A script named main.py has been created to handle the entire automated process i
 ## Additional info: 
 The code is available under the terms of the MIT License. Permitted with proper citation: Unrestricted use, distribution, and reproduction in any medium.
 
+## Applications: 
 <p align="center">
   <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr3_lrg.jpg" width="150" title="Flowchart of the specific methodology to build the national-scale EPC-based UBEM for the case of Spain">
   <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr12_lrg.jpg" width="200" title="Number and percentage of EPCs, number and percentage of certified building units, certified area and percentage of certified area, and number and percentage of complete certified buildings, per energy class and use.">
