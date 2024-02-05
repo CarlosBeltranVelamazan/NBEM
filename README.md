@@ -44,9 +44,9 @@ A script named main.py has been created to handle the entire automated process i
 The code is available under the terms of the MIT License. Permitted with proper citation: Unrestricted use, distribution, and reproduction in any medium.
 
 <p align="center">
-  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr3_lrg.jpg" width="100" title="Flowchart of the specific methodology to build the national-scale EPC-based UBEM for the case of Spain">
+  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr3_lrg.jpg" width="200" title="Flowchart of the specific methodology to build the national-scale EPC-based UBEM for the case of Spain">
   <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr12_lrg.jpg" width="200" title="Number and percentage of EPCs, number and percentage of certified building units, certified area and percentage of certified area, and number and percentage of complete certified buildings, per energy class and use.">
-  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr8_lrg.jpg" width="200" title="Buildings of the city centre of Barcelona ranked by NRPEC per square meter">
+  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr8_lrg.jpg" width="300" title="Buildings of the city centre of Barcelona ranked by NRPEC per square meter">
   <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr9_lrg.jpg" width="200" title="Non-renewable primary energy consumption and CO2 emissions of Spain's building stock per m2, climate zone and year of construction">
 </p>
 Figure 3: Flowchart of the specific methodology to build the national-scale EPC-based UBEM for the case of Spain.
