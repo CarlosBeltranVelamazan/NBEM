@@ -1,5 +1,5 @@
 # NBEM
-Code to generate National-scale Building Energy Models based on Energy Performance Certificates
+Code to generate National-scale Building Energy Models based on Energy Performance Certificates.
 
 ## Description:
 The code in this repository is designed to generate a National-scale Urban Building Energy Model for Spain. The model includes all buildings in Spain, with georeferenced data from the INSPIRE Cadastre and alphanumeric data from the Spanish Cadastre, as well as all energy data obtained from publicly available Energy Performance Certificates (EPCs) in Spain.
