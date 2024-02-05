@@ -5,8 +5,9 @@ Code to generate National-scale Building Energy Models based on Energy Performan
 The code in this repository is designed to generate a National-scale Urban Building Energy Model for Spain. The model includes all buildings in Spain, with georeferenced data from the INSPIRE Cadastre and alphanumeric data from the Spanish Cadastre, as well as all energy data obtained from publicly available Energy Performance Certificates (EPCs) in Spain.
 
 <p align="center">
-  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr2.jpg" width="350" title="General methodology flowchart to build a national-scale EPC-based UBEM in European countries.">
-  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr6.jpg" width="350" title="Georeferenced buildings in Spain with their Climate zone.">
+  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr2.jpg" width="350" title="General methodology flowchart to build a national-scale EPC-based UBEM in European countries">
+  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr3.jpg" width="350" title="Flowchart of the specific methodology to build the national-scale EPC-based UBEM for the case of Spain">
+  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr6.jpg" width="350" title="Georeferenced buildings in Spain with their Climate zone">
 </p>
 
 The code in this repository is part of the paper “A new approach for national-scale Building Energy Models based on Energy Performance Certificates in European countries: the case of Spain”, published in Heliyon in 2023 and written by Carlos Beltran-Velamazan, Marta Monzón-Chavarrías and Belinda López-Mesa from the Built4Life Lab, University of Zaragoza (Spain), doi: https://doi.org/10.1016/j.heliyon.2024.e25473.
