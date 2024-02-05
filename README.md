@@ -5,7 +5,8 @@ Code to generate National-scale Building Energy Models based on Energy Performan
 The code in this repository is designed to generate a National-scale Urban Building Energy Model for Spain. The model includes all buildings in Spain, with georeferenced data from the INSPIRE Cadastre and alphanumeric data from the Spanish Cadastre, as well as all energy data obtained from publicly available Energy Performance Certificates (EPCs) in Spain.
 
 <p align="center">
-  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr2.jpg" width="350" title="General methodology flowchart to build a national-scale EPC-based UBEM in European countries">
+  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr2_lrg.jpg" width="350" title="General methodology flowchart to build a national-scale EPC-based UBEM in European countries">
+  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr2_lrg.jpg" width="350" title="General methodology flowchart to build a national-scale EPC-based UBEM in European countries">
   <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr6.jpg" width="350" title="Georeferenced buildings in Spain with their Climate zone">
 </p>
 
