@@ -6,8 +6,8 @@ The code in this repository is designed to generate a National-scale Urban Build
 
 <p align="center">
   <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr2_lrg.jpg" width="300" title="General methodology flowchart to build a national-scale EPC-based UBEM in European countries">
-  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr2_lrg.jpg" width="300" title="General methodology flowchart to build a national-scale EPC-based UBEM in European countries">
   <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr6_lrg.jpg" width="300" title="Georeferenced buildings in Spain with their Climate zone">
+  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr8_lrg.jpg" width="300" title="Buildings of the city centre of Barcelona ranked by NRPEC per square meter">
 </p>
 
 The code in this repository is part of the paper “A new approach for national-scale Building Energy Models based on Energy Performance Certificates in European countries: the case of Spain”, published in Heliyon in 2023 and written by Carlos Beltran-Velamazan, Marta Monzón-Chavarrías and Belinda López-Mesa from the Built4Life Lab, University of Zaragoza (Spain), doi: https://doi.org/10.1016/j.heliyon.2024.e25473.
