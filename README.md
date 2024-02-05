@@ -7,9 +7,9 @@ The code in this repository is designed to generate a National-scale Urban Build
 <p align="center">
   <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr2_lrg.jpg" width="350" title="General methodology flowchart to build a national-scale EPC-based UBEM in European countries">
   <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr6_lrg.jpg" width="400" title="Georeferenced buildings in Spain with their Climate zone">
-  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr8_lrg.jpg" width="250" title="Buildings of the city centre of Barcelona ranked by NRPEC per square meter">
 </p>
-General methodology flowchart to build a national-scale EPC-based UBEM in European countries - Georeferenced buildings in Spain with their Climate zone
+General methodology flowchart to build a national-scale EPC-based UBEM in European countries - Georeferenced buildings in Spain with their Climate zone.
+
 The code in this repository is part of the paper “A new approach for national-scale Building Energy Models based on Energy Performance Certificates in European countries: the case of Spain”, published in Heliyon in 2023 and written by Carlos Beltran-Velamazan, Marta Monzón-Chavarrías and Belinda López-Mesa from the Built4Life Lab, University of Zaragoza (Spain), doi: https://doi.org/10.1016/j.heliyon.2024.e25473.
 There the methodology is explained and developed and the results obtained are shown. The article can be found in the following link https: https://www.sciencedirect.com/science/article/pii/S2405844024015044?via%3Dihub.
 If you use this tool please cite the paper: Carlos Beltrán-Velamazán, Marta Monzón-Chavarrías, Belinda López-Mesa, A new approach for national-scale Building Energy Models based on Energy Performance Certificates in European countries: The case of Spain, Heliyon, Volume 10, Issue 3, 2024, e25473, ISSN 2405-8440, https://doi.org/10.1016/j.heliyon.2024.e25473.
@@ -42,7 +42,7 @@ A script named main.py has been created to handle the entire automated process i
 The code is available under the terms of the MIT License. Permitted with proper citation: Unrestricted use, distribution, and reproduction in any medium.
 
 <p align="center">
-  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr3_lrg.jpg" width="350" title="Flowchart of the specific methodology to build the national-scale EPC-based UBEM for the case of Spain">
+  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr3_lrg.jpg" width="200" title="Flowchart of the specific methodology to build the national-scale EPC-based UBEM for the case of Spain">
   <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr12_lrg.jpg" width="400" title="Number and percentage of EPCs, number and percentage of certified building units, certified area and percentage of certified area, and number and percentage of complete certified buildings, per energy class and use.">
-  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr8_lrg.jpg" width="250" title="Buildings of the city centre of Barcelona ranked by NRPEC per square meter">
+  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr8_lrg.jpg" width="400" title="Buildings of the city centre of Barcelona ranked by NRPEC per square meter">
 </p>
