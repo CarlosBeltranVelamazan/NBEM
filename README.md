@@ -6,7 +6,6 @@ The code in this repository is designed to generate a National-scale Urban Build
 
 <p align="center">
   <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr2.jpg" width="350" title="General methodology flowchart to build a national-scale EPC-based UBEM in European countries">
-  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr3.jpg" width="350" title="Flowchart of the specific methodology to build the national-scale EPC-based UBEM for the case of Spain">
   <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2405844024015044-gr6.jpg" width="350" title="Georeferenced buildings in Spain with their Climate zone">
 </p>
 
