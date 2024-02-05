@@ -13,7 +13,7 @@ Figure 1: General methodology flowchart to build a national-scale EPC-based UBEM
 Figure 2: Georeferenced buildings in Spain with their Climate zone.
 
 The code in this repository is part of the paper “A new approach for national-scale Building Energy Models based on Energy Performance Certificates in European countries: the case of Spain”, published in Heliyon in 2023 and written by Carlos Beltran-Velamazan, Marta Monzón-Chavarrías and Belinda López-Mesa from the Built4Life Lab, University of Zaragoza (Spain), doi: https://doi.org/10.1016/j.heliyon.2024.e25473.
-There the methodology is explained and developed and the results obtained are shown. The article can be found in the following link https: https://www.sciencedirect.com/science/article/pii/S2405844024015044?via%3Dihub.
+There the methodology is explained and developed and the results obtained are shown. The article can be found in the following link https://www.sciencedirect.com/science/article/pii/S2405844024015044?via%3Dihub.
 If you use this tool please cite the paper: Carlos Beltrán-Velamazán, Marta Monzón-Chavarrías, Belinda López-Mesa, A new approach for national-scale Building Energy Models based on Energy Performance Certificates in European countries: The case of Spain, Heliyon, Volume 10, Issue 3, 2024, e25473, ISSN 2405-8440, https://doi.org/10.1016/j.heliyon.2024.e25473.
 
 # Project info
