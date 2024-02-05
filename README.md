@@ -4,9 +4,9 @@ Code to generate National-scale Building Energy Models based on Energy Performan
 ## Description:
 The code in this repository is designed to generate a National-scale Urban Building Energy Model for Spain. The model includes all buildings in Spain, with georeferenced data from the INSPIRE Cadastre and alphanumeric data from the Spanish Cadastre, as well as all energy data obtained from publicly available Energy Performance Certificates (EPCs) in Spain.
 
-The code in this repository is part of the paper “A new approach for national-scale Building Energy Models based on Energy Performance Certificates in European countries: the case of Spain”, published in Heliyon in 2023 and written by Carlos Beltran-Velamazan, Marta Monzón-Chavarrías and Belinda López-Mesa from the Built4Life Lab, University of Zaragoza (Spain).
-There the methodology is explained and developed and the results obtained are shown. The article can be found in the following link https:
-If you use this tool please cite the following paper:
+The code in this repository is part of the paper “A new approach for national-scale Building Energy Models based on Energy Performance Certificates in European countries: the case of Spain”, published in Heliyon in 2023 and written by Carlos Beltran-Velamazan, Marta Monzón-Chavarrías and Belinda López-Mesa from the Built4Life Lab, University of Zaragoza (Spain), doi: https://doi.org/10.1016/j.heliyon.2024.e25473.
+There the methodology is explained and developed and the results obtained are shown. The article can be found in the following link https: https://www.sciencedirect.com/science/article/pii/S2405844024015044?via%3Dihub
+If you use this tool please cite the following paper: Carlos Beltrán-Velamazán, Marta Monzón-Chavarrías, Belinda López-Mesa, A new approach for national-scale Building Energy Models based on Energy Performance Certificates in European countries: The case of Spain, Heliyon, Volume 10, Issue 3, 2024, e25473, ISSN 2405-8440, https://doi.org/10.1016/j.heliyon.2024.e25473.
 
 ## Project Status:
 Released, development ongoing. Currently, we are fine-tuning the code for better comprehension, and we will be releasing the complete updated code as soon as possible.
