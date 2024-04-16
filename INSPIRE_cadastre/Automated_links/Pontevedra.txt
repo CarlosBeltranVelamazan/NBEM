@@ -1,0 +1,58 @@
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36009-A CAÑIZA/A.ES.SDGC.BU.36009.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36017-A ESTRADA/A.ES.SDGC.BU.36017.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36023-A GUARDA/A.ES.SDGC.BU.36023.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36062-A ILLA DE AROUSA/A.ES.SDGC.BU.36062.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36025-A LAMA/A.ES.SDGC.BU.36025.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36020-AGOLADA/A.ES.SDGC.BU.36020.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36001-ARBO/A.ES.SDGC.BU.36001.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36034-AS NEVES/A.ES.SDGC.BU.36034.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36002-BARRO/A.ES.SDGC.BU.36002.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36004-BUEU/A.ES.SDGC.BU.36004.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36005-CALDAS DE REIS/A.ES.SDGC.BU.36005.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36006-CAMBADOS/A.ES.SDGC.BU.36006.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36007-CAMPO LAMEIRO/A.ES.SDGC.BU.36007.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36008-CANGAS/A.ES.SDGC.BU.36008.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36010-CATOIRA/A.ES.SDGC.BU.36010.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36011-CERDEDO/A.ES.SDGC.BU.36011.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36012-COTOBADE/A.ES.SDGC.BU.36012.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36013-COVELO/A.ES.SDGC.BU.36013.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36014-CRECENTE/A.ES.SDGC.BU.36014.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36015-CUNTIS/A.ES.SDGC.BU.36015.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36016-DOZON/A.ES.SDGC.BU.36016.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36018-FORCAREI/A.ES.SDGC.BU.36018.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36019-FORNELOS DE MONTES/A.ES.SDGC.BU.36019.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36024-LALIN/A.ES.SDGC.BU.36024.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36026-MARIN/A.ES.SDGC.BU.36026.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36027-MEAÑO/A.ES.SDGC.BU.36027.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36028-MEIS/A.ES.SDGC.BU.36028.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36029-MOAÑA/A.ES.SDGC.BU.36029.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36030-MONDARIZ/A.ES.SDGC.BU.36030.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36031-MONDARIZ BALNEARIO/A.ES.SDGC.BU.36031.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36032-MORAÑA/A.ES.SDGC.BU.36032.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36033-MOS/A.ES.SDGC.BU.36033.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36022-O GROVE/A.ES.SDGC.BU.36022.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36039-O PORRIÑO/A.ES.SDGC.BU.36039.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36048-O ROSAL/A.ES.SDGC.BU.36048.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36036-OIA/A.ES.SDGC.BU.36036.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36037-PAZOS DE BORBEN/A.ES.SDGC.BU.36037.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36041-POIO/A.ES.SDGC.BU.36041.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36043-PONTE CALDELAS/A.ES.SDGC.BU.36043.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36042-PONTEAREAS/A.ES.SDGC.BU.36042.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36044-PONTECESURES/A.ES.SDGC.BU.36044.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36900-PONTEVEDRA/A.ES.SDGC.BU.36900.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36040-PORTAS/A.ES.SDGC.BU.36040.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36045-REDONDELA/A.ES.SDGC.BU.36045.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36046-RIBADUMIA/A.ES.SDGC.BU.36046.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36047-RODEIRO/A.ES.SDGC.BU.36047.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36049-SALCEDA DE CASELAS/A.ES.SDGC.BU.36049.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36050-SALVATERRA DE MIÑO/A.ES.SDGC.BU.36050.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36051-SANXENXO/A.ES.SDGC.BU.36051.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36052-SILLEDA/A.ES.SDGC.BU.36052.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36053-SOUTOMAIOR/A.ES.SDGC.BU.36053.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36054-TOMIÑO/A.ES.SDGC.BU.36054.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36055-TUI/A.ES.SDGC.BU.36055.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36056-VALGA/A.ES.SDGC.BU.36056.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36059-VILA DE CRUCES/A.ES.SDGC.BU.36059.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36058-VILABOA/A.ES.SDGC.BU.36058.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36060-VILAGARCIA DE AROUSA/A.ES.SDGC.BU.36060.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/36/36061-VILANOVA DE AROUSA/A.ES.SDGC.BU.36061.zip

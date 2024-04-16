@@ -1,0 +1,8 @@
+http://www.catastro.minhap.es/INSPIRE/Buildings/53/53003-ALGAR/A.ES.SDGC.BU.53003.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/53/53006-ARCOS DE LA FRONTERA/A.ES.SDGC.BU.53006.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/53/53010-BORNOS/A.ES.SDGC.BU.53010.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/53/53017-ESPERA/A.ES.SDGC.BU.53017.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/53/53020-JEREZ DE LA FRONTERA/A.ES.SDGC.BU.53020.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/53/53026-PRADO DEL REY/A.ES.SDGC.BU.53026.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/53/53044-SAN JOSE DEL VALLE/A.ES.SDGC.BU.53044.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/53/53041-VILLAMARTIN/A.ES.SDGC.BU.53041.zip

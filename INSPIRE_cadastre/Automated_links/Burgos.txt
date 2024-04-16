@@ -1,0 +1,371 @@
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09001-ABAJAS/A.ES.SDGC.BU.09001.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09003-ADRADA DE HAZA/A.ES.SDGC.BU.09003.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09006-AGUAS CANDIDAS/A.ES.SDGC.BU.09006.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09007-AGUILAR DE BUREBA/A.ES.SDGC.BU.09007.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09009-ALBILLOS/A.ES.SDGC.BU.09009.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09010-ALCOCERO DE MOLA/A.ES.SDGC.BU.09010.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09011-ALFOZ DE BRICIA/A.ES.SDGC.BU.09011.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09290-ALFOZ DE QUINTANADUEÑAS/A.ES.SDGC.BU.09290.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09012-ALFOZ DE SANTA GADEA/A.ES.SDGC.BU.09012.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09013-ALTABLE/A.ES.SDGC.BU.09013.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09016-AMEYUGO/A.ES.SDGC.BU.09016.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09017-ANGUIX/A.ES.SDGC.BU.09017.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09018-ARANDA DE DUERO/A.ES.SDGC.BU.09018.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09019-ARANDILLA/A.ES.SDGC.BU.09019.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09020-ARAUZO DE MIEL/A.ES.SDGC.BU.09020.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09021-ARAUZO DE SALCE/A.ES.SDGC.BU.09021.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09022-ARAUZO DE TORRE/A.ES.SDGC.BU.09022.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09023-ARCOS/A.ES.SDGC.BU.09023.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09024-ARENILLAS DE RIOPISUERGA/A.ES.SDGC.BU.09024.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09026-ARIJA/A.ES.SDGC.BU.09026.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09027-ARLANZON/A.ES.SDGC.BU.09027.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09028-ARRAYA DE OCA/A.ES.SDGC.BU.09028.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09030-ATAPUERCA/A.ES.SDGC.BU.09030.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09033-AVELLANOSA DE MUÑO/A.ES.SDGC.BU.09033.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09034-BAHABON DE ESGUEVA/A.ES.SDGC.BU.09034.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09036-BAÑOS DE VALDEARADOS/A.ES.SDGC.BU.09036.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09037-BAÑUELOS DE BUREBA/A.ES.SDGC.BU.09037.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09038-BARBADILLO DE HERREROS/A.ES.SDGC.BU.09038.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09039-BARBADILLO DEL MERCADO/A.ES.SDGC.BU.09039.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09040-BARBADILLO DEL PEZ/A.ES.SDGC.BU.09040.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09042-BARRIO DE MUÑO/A.ES.SDGC.BU.09042.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09045-BARRIOS DE COLINA/A.ES.SDGC.BU.09045.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09047-BASCONCILLOS DEL TOZO/A.ES.SDGC.BU.09047.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09048-BASCUÑANA/A.ES.SDGC.BU.09048.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09049-BELBIMBRE/A.ES.SDGC.BU.09049.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09050-BELORADO/A.ES.SDGC.BU.09050.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09052-BERBERANA/A.ES.SDGC.BU.09052.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09053-BERLANGAS DE ROA/A.ES.SDGC.BU.09053.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09054-BERZOSA DE BUREBA/A.ES.SDGC.BU.09054.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09056-BOZOO/A.ES.SDGC.BU.09056.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09057-BRAZACORTA/A.ES.SDGC.BU.09057.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09058-BRIVIESCA/A.ES.SDGC.BU.09058.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09059-BUGEDO/A.ES.SDGC.BU.09059.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09060-BUNIEL/A.ES.SDGC.BU.09060.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09900-BURGOS/A.ES.SDGC.BU.09900.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09062-BUSTO DE BUREBA/A.ES.SDGC.BU.09062.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09063-CABAÑES DE ESGUEVA/A.ES.SDGC.BU.09063.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09064-CABEZON DE LA SIERRA/A.ES.SDGC.BU.09064.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09066-CALERUEGA/A.ES.SDGC.BU.09066.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09068-CAMPILLO DE ARANDA/A.ES.SDGC.BU.09068.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09069-CAMPOLARA/A.ES.SDGC.BU.09069.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09070-CANICOSA DE LA SIERRA/A.ES.SDGC.BU.09070.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09071-CANTABRANA/A.ES.SDGC.BU.09071.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09073-CARAZO/A.ES.SDGC.BU.09073.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09074-CARCEDO DE BUREBA/A.ES.SDGC.BU.09074.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09075-CARCEDO DE BURGOS/A.ES.SDGC.BU.09075.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09076-CARDEÑADIJO/A.ES.SDGC.BU.09076.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09077-CARDEÑAJIMENO/A.ES.SDGC.BU.09077.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09078-CARDEÑUELA RIOPICO/A.ES.SDGC.BU.09078.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09079-CARRIAS/A.ES.SDGC.BU.09079.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09080-CASCAJARES DE BUREBA/A.ES.SDGC.BU.09080.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09081-CASCAJARES DE LA SIERRA/A.ES.SDGC.BU.09081.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09082-CASTELLANOS DE CASTRO/A.ES.SDGC.BU.09082.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09086-CASTIL DE PEONES/A.ES.SDGC.BU.09086.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09085-CASTILDELGADO/A.ES.SDGC.BU.09085.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09087-CASTRILLO DE LA REINA/A.ES.SDGC.BU.09087.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09088-CASTRILLO DE LA VEGA/A.ES.SDGC.BU.09088.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09091-CASTRILLO DE RIOPISUERGA/A.ES.SDGC.BU.09091.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09089-CASTRILLO DEL VAL/A.ES.SDGC.BU.09089.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09093-CASTRILLO MOTA DE JUDIOS/A.ES.SDGC.BU.09093.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09094-CASTROJERIZ/A.ES.SDGC.BU.09094.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09065-CAVIA/A.ES.SDGC.BU.09065.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09096-CAYUELA/A.ES.SDGC.BU.09096.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09097-CEBRECOS/A.ES.SDGC.BU.09097.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09098-CELADA DEL CAMINO/A.ES.SDGC.BU.09098.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09101-CEREZO DE RIO TIRON/A.ES.SDGC.BU.09101.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09103-CERRATON DE JUARROS/A.ES.SDGC.BU.09103.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09104-CIADONCHA/A.ES.SDGC.BU.09104.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09105-CILLAPERLATA/A.ES.SDGC.BU.09105.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09106-CILLERUELO DE ABAJO/A.ES.SDGC.BU.09106.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09107-CILLERUELO DE ARRIBA/A.ES.SDGC.BU.09107.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09108-CIRUELOS DE CERVERA/A.ES.SDGC.BU.09108.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09111-COGOLLOS/A.ES.SDGC.BU.09111.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09112-CONDADO DE TREVIÑO/A.ES.SDGC.BU.09112.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09113-CONTRERAS/A.ES.SDGC.BU.09113.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09115-CORUÑA DEL CONDE/A.ES.SDGC.BU.09115.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09116-COVARRUBIAS/A.ES.SDGC.BU.09116.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09117-CUBILLO DEL CAMPO/A.ES.SDGC.BU.09117.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09118-CUBO DE BUREBA/A.ES.SDGC.BU.09118.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09122-CUEVAS DE SAN CLEMENTE/A.ES.SDGC.BU.09122.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09123-ENCIO/A.ES.SDGC.BU.09123.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09125-ESPINOSA DE CERVERA/A.ES.SDGC.BU.09125.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09127-ESPINOSA DE LOS MONTEROS/A.ES.SDGC.BU.09127.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09126-ESPINOSA DEL CAMINO/A.ES.SDGC.BU.09126.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09128-ESTEPAR/A.ES.SDGC.BU.09128.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09130-FONTIOSO/A.ES.SDGC.BU.09130.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09131-FRANDOVINEZ/A.ES.SDGC.BU.09131.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09132-FRESNEDA DE LA SIERRA TIRON/A.ES.SDGC.BU.09132.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09133-FRESNEÑA/A.ES.SDGC.BU.09133.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09134-FRESNILLO DE LAS DUEÑAS/A.ES.SDGC.BU.09134.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09135-FRESNO DE RIO TIRON/A.ES.SDGC.BU.09135.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09136-FRESNO DE RODILLA/A.ES.SDGC.BU.09136.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09137-FRIAS/A.ES.SDGC.BU.09137.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09138-FUENTEBUREBA/A.ES.SDGC.BU.09138.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09139-FUENTECEN/A.ES.SDGC.BU.09139.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09140-FUENTELCESPED/A.ES.SDGC.BU.09140.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09141-FUENTELISENDO/A.ES.SDGC.BU.09141.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09142-FUENTEMOLINOS/A.ES.SDGC.BU.09142.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09143-FUENTENEBRO/A.ES.SDGC.BU.09143.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09144-FUENTESPINA/A.ES.SDGC.BU.09144.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09146-GALBARROS/A.ES.SDGC.BU.09146.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09151-GRIJALBA/A.ES.SDGC.BU.09151.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09152-GRISALEÑA/A.ES.SDGC.BU.09152.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09154-GUMIEL DE IZAN/A.ES.SDGC.BU.09154.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09155-GUMIEL DE MERCADO/A.ES.SDGC.BU.09155.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09157-HACINAS/A.ES.SDGC.BU.09157.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09158-HAZA/A.ES.SDGC.BU.09158.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09162-HONTANAS/A.ES.SDGC.BU.09162.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09163-HONTANGAS/A.ES.SDGC.BU.09163.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09165-HONTORIA DE LA CANTERA/A.ES.SDGC.BU.09165.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09167-HONTORIA DE VALDEARADOS/A.ES.SDGC.BU.09167.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09166-HONTORIA DEL PINAR/A.ES.SDGC.BU.09166.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09170-HORNILLOS DEL CAMINO/A.ES.SDGC.BU.09170.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09172-HORTIGUELA/A.ES.SDGC.BU.09172.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09173-HOYALES DE ROA/A.ES.SDGC.BU.09173.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09175-HUERMECES/A.ES.SDGC.BU.09175.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09176-HUERTA DE ARRIBA/A.ES.SDGC.BU.09176.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09177-HUERTA DE REY/A.ES.SDGC.BU.09177.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09178-HUMADA/A.ES.SDGC.BU.09178.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09179-HURONES/A.ES.SDGC.BU.09179.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09180-IBEAS DE JUARROS/A.ES.SDGC.BU.09180.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09181-IBRILLOS/A.ES.SDGC.BU.09181.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09182-IGLESIARRUBIA/A.ES.SDGC.BU.09182.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09183-IGLESIAS/A.ES.SDGC.BU.09183.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09184-ISAR/A.ES.SDGC.BU.09184.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09185-ITERO DEL CASTILLO/A.ES.SDGC.BU.09185.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09186-JARAMILLO DE LA FUENTE/A.ES.SDGC.BU.09186.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09187-JARAMILLO QUEMADO/A.ES.SDGC.BU.09187.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09192-JUNTA DE TRASLALOMA/A.ES.SDGC.BU.09192.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09193-JUNTA DE VILLALBA DE LOSA/A.ES.SDGC.BU.09193.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09194-JURISDICCION DE LARA/A.ES.SDGC.BU.09194.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09195-JURISDICCION DE SAN ZADORNIL/A.ES.SDGC.BU.09195.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09120-LA CUEVA DE ROA/A.ES.SDGC.BU.09120.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09147-LA GALLEGA/A.ES.SDGC.BU.09147.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09171-LA HORRA/A.ES.SDGC.BU.09171.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09284-LA PUEBLA DE ARGANZON/A.ES.SDGC.BU.09284.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09323-LA REVILLA Y AHEDO/A.ES.SDGC.BU.09323.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09377-LA SEQUERA DE HAZA/A.ES.SDGC.BU.09377.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09434-LA VID DE BUREBA/A.ES.SDGC.BU.09434.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09433-LA VID Y BARRIOS/A.ES.SDGC.BU.09433.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09169-LAS HORMAZAS/A.ES.SDGC.BU.09169.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09307-LAS QUINTANILLAS/A.ES.SDGC.BU.09307.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09197-LERMA/A.ES.SDGC.BU.09197.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09199-LLANO DE BUREBA/A.ES.SDGC.BU.09199.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09014-LOS ALTOS/A.ES.SDGC.BU.09014.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09031-LOS AUSINES/A.ES.SDGC.BU.09031.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09035-LOS BALBASES/A.ES.SDGC.BU.09035.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09044-LOS BARRIOS DE BUREBA/A.ES.SDGC.BU.09044.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09200-MADRIGAL DEL MONTE/A.ES.SDGC.BU.09200.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09201-MADRIGALEJO DEL MONTE/A.ES.SDGC.BU.09201.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09202-MAHAMUD/A.ES.SDGC.BU.09202.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09203-MAMBRILLA DE CASTREJON/A.ES.SDGC.BU.09203.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09204-MAMBRILLAS DE LARA/A.ES.SDGC.BU.09204.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09205-MAMOLAR/A.ES.SDGC.BU.09205.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09206-MANCILES/A.ES.SDGC.BU.09206.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09211-MAZUELA/A.ES.SDGC.BU.09211.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09213-MECERREYES/A.ES.SDGC.BU.09213.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09214-MEDINA DE POMAR/A.ES.SDGC.BU.09214.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09216-MELGAR DE FERNAMENTAL/A.ES.SDGC.BU.09216.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09218-MERINDAD DE CUESTA URRIA/A.ES.SDGC.BU.09218.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09219-MERINDAD DE MONTIJA/A.ES.SDGC.BU.09219.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09409-MERINDAD DE RIO UBIERNA/A.ES.SDGC.BU.09409.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09220-MERINDAD DE SOTOSCUEVA/A.ES.SDGC.BU.09220.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09221-MERINDAD DE VALDEPORRES/A.ES.SDGC.BU.09221.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09222-MERINDAD DE VALDIVIELSO/A.ES.SDGC.BU.09222.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09223-MILAGROS/A.ES.SDGC.BU.09223.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09224-MIRANDA DE EBRO/A.ES.SDGC.BU.09224.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09225-MIRAVECHE/A.ES.SDGC.BU.09225.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09226-MODUBAR DE LA EMPAREDADA/A.ES.SDGC.BU.09226.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09228-MONASTERIO DE LA SIERRA/A.ES.SDGC.BU.09228.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09229-MONASTERIO DE RODILLA/A.ES.SDGC.BU.09229.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09230-MONCALVILLO/A.ES.SDGC.BU.09230.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09231-MONTERRUBIO DE LA DEMANDA/A.ES.SDGC.BU.09231.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09232-MONTORIO/A.ES.SDGC.BU.09232.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09233-MORADILLO DE ROA/A.ES.SDGC.BU.09233.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09235-NAVA DE ROA/A.ES.SDGC.BU.09235.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09236-NAVAS DE BUREBA/A.ES.SDGC.BU.09236.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09237-NEBREDA/A.ES.SDGC.BU.09237.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09238-NEILA/A.ES.SDGC.BU.09238.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09241-OLMEDILLO DE ROA/A.ES.SDGC.BU.09241.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09242-OLMILLOS DE MUÑO/A.ES.SDGC.BU.09242.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09245-OÑA/A.ES.SDGC.BU.09245.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09246-OQUILLAS/A.ES.SDGC.BU.09246.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09248-ORBANEJA RIOPICO/A.ES.SDGC.BU.09248.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09250-PADILLA DE ABAJO/A.ES.SDGC.BU.09250.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09251-PADILLA DE ARRIBA/A.ES.SDGC.BU.09251.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09252-PADRONES DE BUREBA/A.ES.SDGC.BU.09252.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09254-PALACIOS DE LA SIERRA/A.ES.SDGC.BU.09254.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09255-PALACIOS DE RIOPISUERGA/A.ES.SDGC.BU.09255.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09256-PALAZUELOS DE LA SIERRA/A.ES.SDGC.BU.09256.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09257-PALAZUELOS DE MUÑO/A.ES.SDGC.BU.09257.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09258-PAMPLIEGA/A.ES.SDGC.BU.09258.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09259-PANCORBO/A.ES.SDGC.BU.09259.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09261-PARDILLA/A.ES.SDGC.BU.09261.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09263-PARTIDO DE LA SIERRA EN TOBALI/A.ES.SDGC.BU.09263.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09264-PEDROSA DE DUERO/A.ES.SDGC.BU.09264.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09267-PEDROSA DE RIO URBEL/A.ES.SDGC.BU.09267.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09265-PEDROSA DEL PARAMO/A.ES.SDGC.BU.09265.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09266-PEDROSA DEL PRINCIPE/A.ES.SDGC.BU.09266.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09269-PEÑARANDA DE DUERO/A.ES.SDGC.BU.09269.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09270-PERAL DE ARLANZA/A.ES.SDGC.BU.09270.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09273-PIERNIGAS/A.ES.SDGC.BU.09273.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09274-PINEDA DE LA SIERRA/A.ES.SDGC.BU.09274.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09275-PINEDA TRASMONTE/A.ES.SDGC.BU.09275.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09276-PINILLA DE LOS BARRUECOS/A.ES.SDGC.BU.09276.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09277-PINILLA DE LOS MOROS/A.ES.SDGC.BU.09277.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09278-PINILLA TRASMONTE/A.ES.SDGC.BU.09278.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09280-POZA DE LA SAL/A.ES.SDGC.BU.09280.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09281-PRADANOS DE BUREBA/A.ES.SDGC.BU.09281.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09282-PRADOLUENGO/A.ES.SDGC.BU.09282.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09283-PRESENCIO/A.ES.SDGC.BU.09283.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09285-PUENTEDURA/A.ES.SDGC.BU.09285.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09287-QUEMADA/A.ES.SDGC.BU.09287.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09289-QUINTANA DEL PIDIO/A.ES.SDGC.BU.09289.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09288-QUINTANABUREBA/A.ES.SDGC.BU.09288.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09291-QUINTANAELEZ/A.ES.SDGC.BU.09291.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09296-QUINTANAORTUÑO/A.ES.SDGC.BU.09296.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09297-QUINTANAPALLA/A.ES.SDGC.BU.09297.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09298-QUINTANAR DE LA SIERRA/A.ES.SDGC.BU.09298.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09301-QUINTANAVIDES/A.ES.SDGC.BU.09301.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09304-QUINTANILLA DE LA MATA/A.ES.SDGC.BU.09304.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09303-QUINTANILLA DEL AGUA Y TORDUEL/A.ES.SDGC.BU.09303.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09305-QUINTANILLA DEL COCO/A.ES.SDGC.BU.09305.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09308-QUINTANILLA SAN GARCIA/A.ES.SDGC.BU.09308.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09311-QUINTANILLA VIVAR/A.ES.SDGC.BU.09311.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09312-RABANERA DEL PINAR/A.ES.SDGC.BU.09312.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09313-RABANOS/A.ES.SDGC.BU.09313.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09314-RABE DE LAS CALZADAS/A.ES.SDGC.BU.09314.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09316-REBOLLEDO DE LA TORRE/A.ES.SDGC.BU.09316.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09317-REDECILLA DEL CAMINO/A.ES.SDGC.BU.09317.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09318-REDECILLA DEL CAMPO/A.ES.SDGC.BU.09318.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09319-REGUMIEL DE LA SIERRA/A.ES.SDGC.BU.09319.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09320-REINOSO/A.ES.SDGC.BU.09320.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09322-RETUERTA/A.ES.SDGC.BU.09322.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09325-REVILLA DEL CAMPO/A.ES.SDGC.BU.09325.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09327-REVILLA VALLEJERA/A.ES.SDGC.BU.09327.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09326-REVILLARRUZ/A.ES.SDGC.BU.09326.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09328-REZMONDO/A.ES.SDGC.BU.09328.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09329-RIOCAVADO DE LA SIERRA/A.ES.SDGC.BU.09329.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09332-ROA/A.ES.SDGC.BU.09332.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09334-ROJAS/A.ES.SDGC.BU.09334.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09336-ROYUELA DE RIO FRANCO/A.ES.SDGC.BU.09336.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09337-RUBENA/A.ES.SDGC.BU.09337.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09338-RUBLACEDO DE ABAJO/A.ES.SDGC.BU.09338.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09339-RUCANDIO/A.ES.SDGC.BU.09339.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09340-SALAS DE BUREBA/A.ES.SDGC.BU.09340.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09341-SALAS DE LOS INFANTES/A.ES.SDGC.BU.09341.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09343-SALDAÑA DE BURGOS/A.ES.SDGC.BU.09343.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09345-SALINILLAS DE BUREBA/A.ES.SDGC.BU.09345.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09346-SAN ADRIAN DE JUARROS/A.ES.SDGC.BU.09346.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09348-SAN JUAN DEL MONTE/A.ES.SDGC.BU.09348.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09349-SAN MAMES DE BURGOS/A.ES.SDGC.BU.09349.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09350-SAN MARTIN DE RUBIALES/A.ES.SDGC.BU.09350.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09351-SAN MILLAN DE LARA/A.ES.SDGC.BU.09351.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09372-SAN VICENTE DEL VALLE/A.ES.SDGC.BU.09372.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09354-SANTA CECILIA/A.ES.SDGC.BU.09354.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09356-SANTA CRUZ DE LA SALCEDA/A.ES.SDGC.BU.09356.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09357-SANTA CRUZ DEL VALLE URBION/A.ES.SDGC.BU.09357.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09358-SANTA GADEA DEL CID/A.ES.SDGC.BU.09358.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09359-SANTA INES/A.ES.SDGC.BU.09359.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09361-SANTA MARIA DEL CAMPO/A.ES.SDGC.BU.09361.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09362-SANTA MARIA DEL INVIERNO/A.ES.SDGC.BU.09362.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09363-SANTA MARIA DEL MERCADILLO/A.ES.SDGC.BU.09363.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09364-SANTA MARIA RIBARREDONDA/A.ES.SDGC.BU.09364.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09366-SANTA OLALLA DE BUREBA/A.ES.SDGC.BU.09366.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09367-SANTIBAÑEZ DE ESGUEVA/A.ES.SDGC.BU.09367.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09368-SANTIBAÑEZ DEL VAL/A.ES.SDGC.BU.09368.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09370-SANTO DOMINGO DE SILOS/A.ES.SDGC.BU.09370.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09373-SARGENTES DE LA LORA/A.ES.SDGC.BU.09373.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09374-SARRACIN/A.ES.SDGC.BU.09374.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09375-SASAMON/A.ES.SDGC.BU.09375.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09378-SOLARANA/A.ES.SDGC.BU.09378.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09380-SORDILLOS/A.ES.SDGC.BU.09380.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09381-SOTILLO DE LA RIBERA/A.ES.SDGC.BU.09381.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09384-SOTRAGERO/A.ES.SDGC.BU.09384.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09385-SOTRESGUDO/A.ES.SDGC.BU.09385.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09386-SUSINOS DEL PARAMO/A.ES.SDGC.BU.09386.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09387-TAMARON/A.ES.SDGC.BU.09387.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09389-TARDAJOS/A.ES.SDGC.BU.09389.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09390-TEJADA/A.ES.SDGC.BU.09390.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09392-TERRADILLOS DE ESGUEVA/A.ES.SDGC.BU.09392.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09393-TINIEBLAS DE LA SIERRA/A.ES.SDGC.BU.09393.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09394-TOBAR/A.ES.SDGC.BU.09394.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09396-TORDOMAR/A.ES.SDGC.BU.09396.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09398-TORRECILLA DEL MONTE/A.ES.SDGC.BU.09398.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09399-TORREGALINDO/A.ES.SDGC.BU.09399.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09400-TORRELARA/A.ES.SDGC.BU.09400.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09401-TORREPADRE/A.ES.SDGC.BU.09401.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09402-TORRESANDINO/A.ES.SDGC.BU.09402.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09403-TORTOLES DE ESGUEVA/A.ES.SDGC.BU.09403.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09404-TOSANTOS/A.ES.SDGC.BU.09404.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09406-TRESPADERNE/A.ES.SDGC.BU.09406.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09407-TUBILLA DEL AGUA/A.ES.SDGC.BU.09407.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09408-TUBILLA DEL LAGO/A.ES.SDGC.BU.09408.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09410-URBEL DEL CASTILLO/A.ES.SDGC.BU.09410.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09412-VADOCONDES/A.ES.SDGC.BU.09412.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09415-VALDEANDE/A.ES.SDGC.BU.09415.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09417-VALDEZATE/A.ES.SDGC.BU.09417.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09418-VALDORROS/A.ES.SDGC.BU.09418.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09420-VALLARTA DE BUREBA/A.ES.SDGC.BU.09420.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09331-VALLE DE LAS NAVAS/A.ES.SDGC.BU.09331.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09191-VALLE DE LOSA/A.ES.SDGC.BU.09191.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09421-VALLE DE MANZANEDO/A.ES.SDGC.BU.09421.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09422-VALLE DE MENA/A.ES.SDGC.BU.09422.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09423-VALLE DE OCA/A.ES.SDGC.BU.09423.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09369-VALLE DE SANTIBAÑEZ/A.ES.SDGC.BU.09369.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09376-VALLE DE SEDANO/A.ES.SDGC.BU.09376.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09424-VALLE DE TOBALINA/A.ES.SDGC.BU.09424.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09425-VALLE DE VALDEBEZANA/A.ES.SDGC.BU.09425.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09426-VALLE DE VALDELAGUNA/A.ES.SDGC.BU.09426.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09427-VALLE DE VALDELUCIO/A.ES.SDGC.BU.09427.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09428-VALLE DE ZAMANZAS/A.ES.SDGC.BU.09428.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09429-VALLEJERA/A.ES.SDGC.BU.09429.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09430-VALLES DE PALENZUELA/A.ES.SDGC.BU.09430.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09431-VALLUERCANES/A.ES.SDGC.BU.09431.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09419-VALMALA/A.ES.SDGC.BU.09419.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09435-VILEÑA/A.ES.SDGC.BU.09435.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09439-VILLADIEGO/A.ES.SDGC.BU.09439.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09440-VILLAESCUSA DE ROA/A.ES.SDGC.BU.09440.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09441-VILLAESCUSA LA SOMBRIA/A.ES.SDGC.BU.09441.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09442-VILLAESPASA/A.ES.SDGC.BU.09442.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09443-VILLAFRANCA MONTES DE OCA/A.ES.SDGC.BU.09443.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09445-VILLAFRUELA/A.ES.SDGC.BU.09445.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09446-VILLAGALIJO/A.ES.SDGC.BU.09446.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09447-VILLAGONZALO PEDERNALES/A.ES.SDGC.BU.09447.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09450-VILLAHOZ/A.ES.SDGC.BU.09450.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09451-VILLALBA DE DUERO/A.ES.SDGC.BU.09451.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09452-VILLALBILLA DE BURGOS/A.ES.SDGC.BU.09452.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09453-VILLALBILLA DE GUMIEL/A.ES.SDGC.BU.09453.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09455-VILLALDEMIRO/A.ES.SDGC.BU.09455.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09456-VILLALMANZO/A.ES.SDGC.BU.09456.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09458-VILLAMAYOR DE LOS MONTES/A.ES.SDGC.BU.09458.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09459-VILLAMAYOR DE TREVIÑO/A.ES.SDGC.BU.09459.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09460-VILLAMBISTIA/A.ES.SDGC.BU.09460.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09461-VILLAMEDIANILLA/A.ES.SDGC.BU.09461.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09462-VILLAMIEL DE LA SIERRA/A.ES.SDGC.BU.09462.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09463-VILLANGOMEZ/A.ES.SDGC.BU.09463.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09464-VILLANUEVA DE ARGAÑO/A.ES.SDGC.BU.09464.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09465-VILLANUEVA DE CARAZO/A.ES.SDGC.BU.09465.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09466-VILLANUEVA DE GUMIEL/A.ES.SDGC.BU.09466.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09470-VILLANUEVA DE TEBA/A.ES.SDGC.BU.09470.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09471-VILLAQUIRAN DE LA PUEBLA/A.ES.SDGC.BU.09471.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09472-VILLAQUIRAN DE LOS INFANTES/A.ES.SDGC.BU.09472.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09473-VILLARCAYO DE MERINDAD DE CAST/A.ES.SDGC.BU.09473.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09474-VILLARIEZO/A.ES.SDGC.BU.09474.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09477-VILLASANDINO/A.ES.SDGC.BU.09477.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09480-VILLASUR DE HERREROS/A.ES.SDGC.BU.09480.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09481-VILLATUELDA/A.ES.SDGC.BU.09481.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09483-VILLAVERDE DEL MONTE/A.ES.SDGC.BU.09483.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09484-VILLAVERDE MOGINA/A.ES.SDGC.BU.09484.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09488-VILLAYERNO MORQUILLAS/A.ES.SDGC.BU.09488.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09489-VILLAZOPEQUE/A.ES.SDGC.BU.09489.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09490-VILLEGAS/A.ES.SDGC.BU.09490.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09493-VILLORUEBO/A.ES.SDGC.BU.09493.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09436-VILORIA DE RIOJA/A.ES.SDGC.BU.09436.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09437-VILVIESTRE DEL PINAR/A.ES.SDGC.BU.09437.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09496-VIZCAINOS/A.ES.SDGC.BU.09496.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09498-ZAEL/A.ES.SDGC.BU.09498.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09500-ZARZOSA DE RIO PISUERGA/A.ES.SDGC.BU.09500.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09501-ZAZUAR/A.ES.SDGC.BU.09501.zip
+http://www.catastro.minhap.es/INSPIRE/Buildings/09/09503-ZUÑEDA/A.ES.SDGC.BU.09503.zip
