@@ -30,7 +30,7 @@ def TratarCAT (Carpeta_archivos_descargas_CA, carpeta, fichero, Carpeta_archivos
         archivo,
         has_header=False,
         skip_rows=1,
-        sep = '$',
+        separator = '$',
         encoding='latin-1',
         new_columns=["All"], truncate_ragged_lines=True
     )
