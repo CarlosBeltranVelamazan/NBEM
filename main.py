@@ -30,6 +30,8 @@ The model is controlled directly from this script, it is not necessary to enter 
 Each step and substep can be executed separately independently and contains True or False variables to control each step and substep of the process and numerical variables to choose between different options to generate the model.
 Please read the notes of each step carefully as they contain important information to be able to generate the model, step B require have the information from steps A that they need.
 In each step, the notes include the recommended configuration to generate the model and the expected results at each step with the recommended configuration.
+
+To handle the model, some python libraries are needed, see requirements.txt file. To install the libraries execute "pip install -r requirements.txt".
 """
 
  # Step 0 - Select the scale of the model
@@ -65,15 +67,25 @@ switch_CCAA = {
 
 # Step A.0, Create folders to store the data - Just the first time, will create the structure of folders to or contain the input data or the steps or the output
                                                                           # The neccesary folders are:
-                                                                          # Internal scripts: Contains the code to generate the model
+        # Internal scripts: Contains the code to generate the model
+        # Folders for the Step A.1 Energy Performance Certificates (EPC)
 folder_read_EPC = r'Downloaded_EPC_databases'                             # The folder where the files of the EPCs will be read from and if the download option is chosen the EPCs files will be saved 
 folder_save_EPC_modificed = r'Modified_EPC_Databases'                     # The folder where the generated files will be saved
+        # Folders for the Step A.2 Alphanumeric cadastre
 folder_read_Alphanumeric_cadastre = r'Alphanumeric_cadastre'              # The folder to store the zip files from the Alphanumeric Cadastre
+        # Folders for the Step A.3 INSPIRE cadastre
 folder_INSPIRE = r'INSPIRE_cadastre'                                      # The folder with all the data and models from the INSPIRE Cadastre
 folder_txt_INSPIRE = r'INSPIRE_cadastre\Original_txt_links'               # Additional feature: It allows updating the download links for the Inspire cadastre that will be used by the algorithm, contains the raw text of the webs with the links.
 folder_INSPIRE_links = r'INSPIRE_cadastre\Automated_links'                # Contains the txt with the links to the INSPIRE Cadastre ready to download
 folder_download_INSPIRE_zips = r'INSPIRE_cadastre\INSPIRE_files'          # Contains the downloaded INSPIRE Cadastre zips
-
+        # Folders for the Step A.4 Others
+folder_Additional_Information = r'Additional_Information'                 # Includes supplementary data to enhance the model, including climate zones map or the population residing in each municipality.
+        # Folders for the Step B.1 Energy performance model
+b1_output = r'Energy_performance_model'                                   # Contains the B.1 step outputs
+        # Folders for the Step B.2 National enhanced building stock GIS model
+b2_output = r'National_enhanced_building_stock_GIS_model'                 # Contains the B.2 step outputs
+        # Folders for the Step B.3 National enhanced building stock GIS model
+b3_output = r'National-scale_EPC-based_Building_Energy_Model'             # Contains the B.3 step outputs (the final file of the entire process)
 
 Step_A_0 = True     # Create folders to store the data
 if Step_A_0 == True:
@@ -84,6 +96,7 @@ if Step_A_0 == True:
     os.makedirs(folder_txt_INSPIRE, exist_ok=True)
     os.makedirs(folder_INSPIRE_links, exist_ok=True)
     os.makedirs(folder_download_INSPIRE_zips, exist_ok=True)
+    os.makedirs(folder_Additional_Information, exist_ok=True)
 
 # Step A.1, Management of EPC in python - To use this step mark the variable Step_A_1 as True and provide the rest of the information required. Please see notes below.
 Step_A_1 = False
@@ -93,7 +106,7 @@ if Step_A_1 == True:
     Download_EPCs_DDBB = True                               # Step A.1.1. Download the data from the public EPCs Databases (True or False) (see notes below)
     Homogenize_DDBB = True                                  # Step A.1.2. Homogenize the databases (True or False) (necessary for the following steps)
     Filter_by_date = True                                   # Step A.1.3. Filter by certificate registration date (True or False)
-    Filter_date = 2023                                      # Step A.1.3. Date included in the range that we want to filter (must be a year), also filter the EPCs registered before 2010 as errors. If we put 2019, we will use all certificates prior to 1/1/2020, (integer)
+    Filter_date = 2024                                      # Step A.1.3. Date included in the range that we want to filter (must be a year), also filter the EPCs registered before 2010 as errors. If we put 2019, we will use all certificates prior to 1/1/2020, (integer)
     Certificates_date_used = 1                              # Step A.1.3. To use all the data (0), those before the date of filtering (1) or those after the date of filtering (2)
     Divide_by_use_EPCs = False                              # To divide the dataset by the use of the EPC into residential or non-residential (True or False) (*)
     Use_EPCs = 0                                            # To use all the data (0), those for residential use (1) or those for tertiary use (2) (*)
@@ -102,8 +115,6 @@ if Step_A_1 == True:
     EPCs_joined_by_RefCat = 0                               # To use the single EPCs data (0), or the data grouped by building (grouped by Cadastral Reference) (1) (*)
     Join_DDBB_Spain = True                                  # Join all the EPCs DDBB in a single database at national level (True or False) (necessary for the following steps)
     Divide_into_buildings_and_buildings_units = True        # Result Step A.1. Divide the dataset into building or real estate certificates (14 or 20 digits of cadastral reference) (True or False)
-
-
 
     A_Script_clave.EPCs (folder_read_EPC, folder_save_EPC_modificed, CCAA, Download_EPCs_DDBB, Homogenize_DDBB, Filter_by_date, Filter_date, Certificates_date_used, Divide_by_use_EPCs, Use_EPCs, Detect_errors, 
                   Join_by_RefCat, EPCs_joined_by_RefCat, Join_DDBB_Spain, Divide_into_buildings_and_buildings_units)
@@ -124,8 +135,7 @@ if Step_A_1 == True:
                 EPCs_joined_by_RefCat = 0                               # To use the single EPCs data (0), or the data grouped by building (grouped by Cadastral Reference) (1) (*)
                 Join_DDBB_Spain = True                                  # Join all the EPCs DDBB in a single database at national level (True or False) (necessary for the following steps)
                 Divide_into_buildings_and_buildings_units = True        # Result Step A.1. Divide the dataset into building or real estate certificates (14 or 20 digits of cadastral reference) (True or False)
-                folder_read_EPC = 'Downloaded_EPC_databases'                    # The folder where the files of the EPCs will be read from and if the download option is chosen the EPCs files will be saved 
-                folder_save_EPC_modificed = 'Modified_EPC_Databases'          # The folder where the generated files will be saved
+
         
         2 - (*) In the final version of the cbc-NBEM these steps are not used, however, as they may be useful, the option of generating the data using these functionalities has been maintained. 
             To generate the cbc-NBEM it is recommended to set the values marked with (*) to False or 0 as appropriate.
@@ -251,10 +261,26 @@ if Step_A_2 == True:
 
     building_scale_cadastre = True                            # Process the CAT files to obtain the information by building at the province scale
     building_unit_scale_cadastre = True                       # Process the CAT files to obtain the information by building unit at the province scale
+    drop_unused_columns = True                                # Result Step A.2. Eliminate from the alphanumeric cadastre result files the columns that are not necessary to reduce the file size
+
+    # Drop unused columns is recommended as it greatly reduces the calculation time and the size of the resulting file. Depending on the output scale, building or building units, there are different columns to use. 
+    # It is recommended to leave the default list of the code but you can see section 5 of the notes to select the desired columns.
+    columns_to_use_buildings= ['Provincia', 'CMunicipioDGC', 'ReferenciaCatastral_parcela', 'CMunicipioINE', 'CP', 'SupFinca', 'SupConstruida', 'Sup_sobre_rasante', 'Sup_bajo_rasante', 'Sup_cubierta',
+        'FechaConstruccion', 'ExactitudFechaConstruccion', 'Longitud_de_fachada', 'Indicador_reforma_o_rehabilitacion', 'Fecha_reforma', 'Antiguedad_efectiva_en_catastro', 'Superficie_del_local',
+        'Calidad_de_la_edificacion', 'FechaConstruccion_BI', 'Plantas', 'N_BI', 'Sup_elementos_urbanos', 'Viv', 'S_Viv', 'Almacen', 'S_Almacen', 'Ind', 'S_Ind', 'Of', 'S_Of', 'Com', 'S_Com', 'Dep', 'S_Dep', 'Esp', 'S_Esp',
+        'Host', 'S_Host', 'San', 'S_San', 'Cult', 'S_Cult', 'Rel', 'S_Rel', 'Sin', 'S_Sin', 'IAg', 'S_IAg', 'Ag', 'S_Ag', 
+        'Periodo_Construccion', 'Cluster_ERESEE', 'Tipologia_constructiva', 'Plantas_DEF']
+    columns_to_use_building_units= ['Provincia', 'CMunicipioDGC', 'ReferenciaCatastral_parcela', 'Referencia_BI', 'CMunicipioINE_BI', 'NombreProvincia_BI', 'Clavegrupo_BI',
+        'CMunicipioINE', 'CP', 'SupFinca', 'SupConstruida', 'Sup_sobre_rasante', 'Sup_bajo_rasante', 'Sup_cubierta', 'FechaConstruccion', 'ExactitudFechaConstruccion',
+        'Longitud_de_fachada', 'Indicador_reforma_o_rehabilitacion', 'Fecha_reforma', 'Antiguedad_efectiva_en_catastro', 'Superficie_del_local',
+        'Calidad_de_la_edificacion', 'FechaConstruccion_BI', 'Plantas', 'N_BI', 'Sup_elementos_urbanos', 
+        'Viv', 'S_Viv', 'Almacen', 'S_Almacen', 'Ind', 'S_Ind', 'Of', 'S_Of', 'Com', 'S_Com', 'Dep', 'S_Dep', 'Esp', 'S_Esp',
+        'Host', 'S_Host', 'San', 'S_San', 'Cult', 'S_Cult', 'Rel', 'S_Rel', 'Sin', 'S_Sin', 'IAg', 'S_IAg', 'Ag', 'S_Ag', 
+        'Periodo_Construccion', 'Cluster_ERESEE', 'Tipologia_constructiva', 'Plantas_DEF']
 
     # Step A.2.3. Done automatically
 
-    E_Script_clave.Alphanumeric_cadastre (PROV, folder_read_Alphanumeric_cadastre, Extract_ZIP_files, building_scale_cadastre, building_unit_scale_cadastre)
+    E_Script_clave.Alphanumeric_cadastre (PROV, folder_read_Alphanumeric_cadastre, Extract_ZIP_files, building_scale_cadastre, building_unit_scale_cadastre, drop_unused_columns, columns_to_use_buildings, columns_to_use_building_units)
 
     """ 
     Notes about the Step A.2:
@@ -268,17 +294,28 @@ if Step_A_2 == True:
 
         2 - During the execution of the code, several print commands have been written that will appear, they are written in Spanish, in general they offer information about the process or some minor notes about what is being generated.
         
-        3 - Intermediate files: Step A.2 consumes a large amount of space on the hard drive due to the large size of the files generated. 
+        3 - At times, the cadastral data may include duplicated buildings; it is advisable to treat them as errors and remove them. This process will eliminate all buildings with two or more different entries sharing the same cadastral reference (14 or 20 digits).
+        
+        4 - Intermediate files: Step A.2 consumes a large amount of space on the hard drive due to the large size of the files generated. 
             It is highly recommended that once the process is generated, the intermediate files used are deleted.
             The intermediate files that can be deleted are the downloaded zip files and the files located in the folders 'Archivos_descomprimidos' ('Unzipped files'), 'Datos por Provincia' ('Data by province'), Datos por Provincia_escala_BI ('Data by province building unit scale') and the txt reports.
             
-        4 - Output: Two final files are generated, one with the information at the building scale and the other with the information at the real estate scale.
+        5 -Drop unused columns: It is recommended that only the columns that are going to be useful be selected from the list, this speeds up the process time and eliminates a lot of information that is not relevant.
+           It is recommended to leave the default list of the code. This is the list of all the columns removed from the cadastre: ReferenciaCatastral_parcela and Referencia_BI are mandatory to keep it to be able to join the cadastres and the EPCs
+           Columns dropped at building scale: 'Tipo_de_registro', 'N_plantas_F', 'Superficie_suelo_EC', 'Planta_C', 'Sup_porches_y_terrazas', 'Sup_en_otras_plantas', 
+           Columns dropped at building unit scale: 'Tipo_de_registro', 'N_plantas_F', 'Superficie_suelo_EC', 'Planta_C', 'Sup_porches_y_terrazas', 'Sup_en_otras_plantas', 
+
+
+        6 - Output: Two final files are generated, one with the information at the building scale and the other with the information at the real estate scale.
             Both are found in the folder: "Datos del Catastro alfanumerico por edificio" ("Data from the alphanumeric cadastre by building") and the files are named 
             "Edificios_España_Completos" ("Buildings in Spain completed") and "Edificios_España_Completos_escala_BI" ("Buildings units in Spain completed").
+
+        7 - Output: If you mark the option to delete unused columns as True, it eliminates the columns from the previous result file that will not be used later, 
+            generating lighter additional files with all the main information with the previous name accompanied by "_Reduced".
     """
 
 # Step A.3, INSPIRE cadastre - To use this step mark the variable Step_A_3 as True and provide the rest of the information required. Please see notes below.
-Step_A_3 = True
+Step_A_3 = False
 if Step_A_3 == True:
     # This step will generate a GIS map with all the buildings in Spain with the information contained in the INSPIRE cadastre. This information is provided at the building scale (14-digit cadastral reference).
 
@@ -298,7 +335,7 @@ if Step_A_3 == True:
             # An additional file will be created containing the number of excepted files downloaded per region in the next step, to ensure that all files have been downloaded. 
     
     encoding_txt = 'utf-8'  # As a recommendation, use 'utf-8', in some cases also 'latin-1' is useful. There are some problems with spanish and catalan letters in the links.
-    Step_A_3_1_Part_1 = False
+    Step_A_3_1_Part_1 = True
     if Step_A_3_1_Part_1  == True:
         from Internal_scripts.B_Scripts_Catastro_INSPIRE import Update_download_links
         Update_download_links.Automate_links (folder_txt_INSPIRE, folder_INSPIRE_links, encoding_txt)
@@ -310,20 +347,20 @@ if Step_A_3 == True:
             # The preceding script will also produce a file indicating the expected number of files for each province's folder. Kindly verify that all downloads have been successful.
             # Additionally, in the console, it will display whether each link has been downloaded successfully or the download error.
         
-    Step_A_3_1_Part_2 = False
+    Step_A_3_1_Part_2 = True
     if Step_A_3_1_Part_2  == True:
         from Internal_scripts.B_Scripts_Catastro_INSPIRE import Download_INSPIRE_files
         Download_INSPIRE_files.Download_files (folder_INSPIRE_links, folder_download_INSPIRE_zips, encoding_txt)
 
         # Part 3: Unzip the data. The ZIP files for each province are being decompressed.
-    Step_A_3_1_Part_3 = False
+    Step_A_3_1_Part_3 = True
     if Step_A_3_1_Part_3  == True:
         from Internal_scripts.B_Scripts_Catastro_INSPIRE import Unzip_INSPIRE
         Unzip_INSPIRE.Unzip (folder_download_INSPIRE_zips)
 
         # Part 4: Delete the files we do not wish to keep.
             # The uncompressed information takes up a lot of space, that's why, since we are only going to use the 'building.gml' layer, it is recommended to delete the unused layers (buildingpart, otherconstruction, and the XML).
-    Step_A_3_1_Part_4 = False
+    Step_A_3_1_Part_4 = True
     if Step_A_3_1_Part_4  == True:
         from Internal_scripts.B_Scripts_Catastro_INSPIRE import Delete_buildingpart_and_other_constructions
         Delete_buildingpart_and_other_constructions.Delete_non_used_files (folder_download_INSPIRE_zips)
@@ -334,8 +371,11 @@ if Step_A_3 == True:
     if Step_A_3_2  == True:
         Coordinate_Reference_System = 'EPSG:25830'          # The standard crs in Spain is ETRS89 / UTM Zone 30N, EPSG:25830. Part of the info is on 'ETRS89 / UTM zone 31N', 'ETRS89 / UTM zone 29N' and REGCAN95 for the Cannary Islands and must be transformed into a common crs.
         drop_duplicates = True                              # At times, the cadastral data may include duplicated buildings; it is advisable to treat them as errors and remove them. This process will eliminate all buildings with two or more entries sharing the same cadastral reference (14 digits).
+        drop_unused_columns = True                          # Result Step A.3. Eliminate from the INSPIRE cadastre result files the columns that are not necessary to reduce the file size
+        columns_to_use = ['reference', 'beginning', 'conditionOfConstruction', 'currentUse', 'numberOfBuildingUnits', 'numberOfDwellings', 'value', 'geometry'] # See section 5 in the notes to select the columns you want to use.
+
         from Internal_scripts.B_Scripts_Catastro_INSPIRE import Create_GIS_buildings_map
-        Create_GIS_buildings_map.Merge_files (folder_download_INSPIRE_zips, folder_INSPIRE, Coordinate_Reference_System, drop_duplicates)
+        Create_GIS_buildings_map.Merge_files (folder_download_INSPIRE_zips, folder_INSPIRE, Coordinate_Reference_System, drop_duplicates, drop_unused_columns, columns_to_use)
 
     """ 
     Notes about the Step A.3:
@@ -353,8 +393,131 @@ if Step_A_3 == True:
         2 - During the execution of the code, several print commands have been written that will appear, they offer information about the download process or some minor notes about what is being generated.
 
         3 - In case to prefer use a single or several provincies just move the rest of the txt links out of the folders.
+
+        4 - Note: this step requires a lot of time (more than 24 hours for all the buildings of Spain).
         
-        4 - Output: A final file is generated, with the GIS map with all the building in the INSPIRE Spanish Cadastre named GIS_INSPIRE_Buildings.parquet in the INSPIRE folder. This is a geoparquet file and can be opened and modified in QGIS or ArcGIS if desired.
+        5 - Drop unused columns: It is recommended that only the columns that are going to be useful be selected from the list, this speeds up the process time and eliminates a lot of information that is not relevant.
+            This is the list of all the columns contained in the basic INSPIRE cadastre: reference is mandatory to keep it to be able to join the cadastres and the EPCs
+                ['gml_id', 'beginLifespanVersion', 'conditionOfConstruction', 'beginning', 'end', 'endLifespanVersion',
+                 'informationSystem', 'reference', 'localId', 'namespace', 'horizontalGeometryEstimatedAccuracy',
+                 'horizontalGeometryEstimatedAccuracy_uom', 'horizontalGeometryReference', 'referenceGeometry', 'currentUse', 'numberOfBuildingUnits',
+                 'numberOfDwellings', 'documentLink', 'format', 'sourceStatus',
+                 'officialAreaReference', 'value', 'value_uom', 'geometry']
+
+        6 - Output: A final file is generated, with the GIS map with all the building in the INSPIRE Spanish Cadastre named GIS_INSPIRE_Buildings.parquet in the INSPIRE folder. This is a geoparquet file and can be opened and modified in QGIS or ArcGIS if desired.
         """
 
+# Step A.4, Others - Please see notes below.
+    # This step is divided into two independent parts: Part 1 involves creating the climate zones map, and Part 2 involves classifying the buildings as built in rural or urban municipalities.
+
+    # Part 1: Climate zones map
+            # The Climate zones map is generated using the official provinces map and the Digital Terrain Model from the CNIG, in particular de MDT 200. Available at the following link: https://centrodedescargas.cnig.es/CentroDescargas/index.jsp
+            # As it is generated only once, automating the process has not been deemed relevant. This map can be created using QGIS through its tools or with geopandas.
+            # To generate it, all files should be merged into a single coordinate reference system, and it is recommended to use ETRS89 / UTM Zone 30N, EPSG:25830, should be the same as the one crs used for the buildings in the INSPIRE Cadastre.
+            # Using the criteria specified in the DB HE "Energy Savings," Annex B: Climatic Zones, contour lines defining the climatic zones can be generated. Subsequently, it is sufficient to intersect the province polygons with these lines and assign the climatic zone. For more information, refer to the Heliyon paper.
+            # The climate zones map file should be stored in the "Additional_Information" folder.
+
+    # Part 2: Municipalities sizes
+            # The population data for municipalities throughout Spain is available from the INE (National Institute of Statistics) at https://www.ine.es/dynt3/inebase/es/index.htm?padre=525.
+            # This step will be carried out later in step B.2.3, where each building will be assigned the type of municipality in which it was constructed. 
+            # In this step, it is sufficient to download the INE population file and store it in the "Additional_Information" folder.
+
+# Step B, Model generation
+    
+# Step B.1, Energy performance model
+Step_B_1 = False
+if Step_B_1 == True:
+    # In this section, the information from the EPCs (Energy Performance Certificates) is merged with the alphanumeric cadastre, filtered and analysed.
+    from Internal_scripts import A_7_3_Prepara_EPC_edif_BI
+    from Internal_scripts import A_8_Combina_parquet_EPC_edif_BI_cat_alfanum
+    from Internal_scripts import A_9_Combina_EPC_edif_BI_agrupa_por_edificio
+
+    EPC_database_14_digits = r'BBDD_Unidas por Referencia Catastral\Parquet\Todos_los_certificados_España_Pre_2025_14DigitRefCat.csv'                                   # The output files of the A.1 process (EPCs). 14 digits cadastral reference (buildings)
+    EPC_database_20_digits = r'BBDD_Unidas por Referencia Catastral\Parquet\Todos_los_certificados_España_Pre_2025_20DigitRefCat.csv'                                   # The output files of the A.1 process (EPCs). 20 digits cadastral reference (building units)
+    alphanumeric_cadastre_database_buildings = r'Alphanumeric_cadastre\Datos del Catastro alfanumerico por edificio\Edificios_España_Completos_Reducido.gzip'                     # The output files of the A.2 process (Alphanumeric cadastre). 14 digits cadastral reference (buildings) # It is recommended to use parquet files
+    alphanumeric_cadastre_database_building_units = r'Alphanumeric_cadastre\Datos del Catastro alfanumerico por edificio\Edificios_España_Completos_escala_BI_Reducido.gzip'      # The output files of the A.2 process (Alphanumeric cadastre). 20 digits cadastral reference (building units) # It is recommended to use parquet files
+    B_1_model_name = r'\Energy_performance_model' # The name of the output file of the B.1 step
+
+    os.makedirs(b1_output, exist_ok=True)
+    EPC_database_14_digits_prepared, EPC_database_20_digits_prepared = A_7_3_Prepara_EPC_edif_BI.prepare_EPCs (EPC_database_14_digits, EPC_database_20_digits)
+    b1_14_digits, b1_20_digits = A_8_Combina_parquet_EPC_edif_BI_cat_alfanum.combine_with_cadastre (EPC_database_14_digits_prepared, EPC_database_20_digits_prepared, alphanumeric_cadastre_database_buildings, alphanumeric_cadastre_database_building_units, b1_output)
+    b1_model = A_9_Combina_EPC_edif_BI_agrupa_por_edificio.group_by_building (b1_14_digits, b1_20_digits, b1_output, B_1_model_name)
+
+    # from Internal_scripts import Z_5_Combina_EPC_edif_BI_sin_agrupar_por_edificio  # Optional, combines EPC and alphanumeic cadaster at building unit scale (without group by building)
+
+# Step B.2, National enhanced building stock GIS model
+Step_B_2 = False
+if Step_B_2 == True:
+    # In this section, the information from the INSPIRE Cadastre is merged with the alphanumeric cadastre, the climate zones map and the type of municipality
+    os.makedirs(b2_output, exist_ok=True)
+    # Step B.2.1, Assign Climate zone to buildings
+    Step_B_2_1 = True
+    if Step_B_2_1 == True:
+      # Note: the assignment of climatic zones can be done building by building with a spatial union with the INSPIRE cadastre or if the climatic zones 
+      # have been calculated by municipality, it can be joined by municipality code between the map of climatic zones and the alphanumeric cadastre.
+        climate_zone_map = r'Additional_Information\Municipios de España con su Zonas climática.csv' # The path to the climate zones map (step A.4)
+        Alphanumeric_buildings = r'Alphanumeric_cadastre\Datos del Catastro alfanumerico por edificio\Edificios_España_Completos_Reducido.gzip' # The path to the Alphanumeric cadastre (step A.2)
+        buildings_with_climate_zones_name = r'\Buildings_with_climate_zones'
+
+        from Internal_scripts.B_Scripts_Catastro_INSPIRE import Combine_alphanumeric_Climate_zones
+        Combine_alphanumeric_Climate_zones.Assign_climate_zone (climate_zone_map, Alphanumeric_buildings, b2_output, buildings_with_climate_zones_name)
+
+    # Step B.2.2, Assign type of municipality. Combine alphanumerical cadastre and the population census by municipality to know what type of municipality the building is located in (rural or urban)
+    # This step updates the input file by adding the indicated column, interrupting this step may cause the file to be corrupted.
+    Step_B_2_2 = True
+    if Step_B_2_2 == True:
+        from Internal_scripts import G_1_2_Municipio_Rural_o_Urbano_Catastro_Alfanumerico_parquet
+        population_census = r'Additional_Information\pobmun22.xlsx'
+        Alphanumeric_buildings = r'National_enhanced_building_stock_GIS_model\Buildings_with_climate_zones.gzip'
+        G_1_2_Municipio_Rural_o_Urbano_Catastro_Alfanumerico_parquet.assign_type_of_municipality(population_census, Alphanumeric_buildings)
+
+    # Step B.2.3, Union of cadastres. Combine INSPIRE and alphanumerical cadastre
+    Step_B_2_3 = True
+    if Step_B_2_3 == True:
+
+        # The path to the INSPIRE and alphanumeric cadastres (step A.2 and A.3) (remember to use the data from the cadastre with the climatic zone from the previous step)
+        INSPIRE_buildings = r'INSPIRE_cadastre\GIS_INSPIRE_Buildings_v2.parquet' # The path to the INSPIRE cadastre (step A.2) or the INSPIRE with climate zones (step B.2.1)
+        Alphanumeric_buildings = r'National_enhanced_building_stock_GIS_model\Buildings_with_climate_zones.gzip' # The path to the Alphanumeric cadastre (step A.2) or the Alphanumeric with climate zones (step B.2.1)
+        B_2_model_name = r'\National_enhanced_building_stock_GIS_model' # The name of the output file of the B.2 step
+
+        from Internal_scripts import G_1_Uno_parquet_INSPIRE_y_Alfanumerico   
+
+    # This step can be done in 2 ways, tabular data (non a GIS map), faster and less time and resources consuming or a GIS map which contains the geoespatial information
+    # Part 1: Tabular data
+        # If the desired objective is tabular information, it can be obtained in Parquet or CSV format with all the details. 
+        # This outcome may be more practical depending on the use, as the reading time and file size are significantly reduced compared to a GIS map.
+        Tabular_data = True
+        if Tabular_data == True:
+            G_1_Uno_parquet_INSPIRE_y_Alfanumerico.combine_cadastres (INSPIRE_buildings, Alphanumeric_buildings, b2_output, B_2_model_name)
+
+    # Part 2: GIS map
+        # If the desired objective is a GIS map at building by building scale, it is obtained by combining the geographical information from the INSPIRE cadastre with the alphanumeric data, resulting in a map. 
+        # This step can be performed in two ways: "inner" (only buildings with EPCs will be generated) and "left" (a map with all buildings in Spain will be generated, and EPC information will be added for buildings with at least one certificate).
+        # from Internal_scripts import G_12_Uno_geoparquet_Edif_España_y_CEE
+        GIS_data = True
+        if GIS_data == True:
+            G_1_Uno_parquet_INSPIRE_y_Alfanumerico.combine_cadastres_GIS (INSPIRE_buildings, Alphanumeric_buildings, b2_output, B_2_model_name)
+
+# Step B.3, National-scale EPC-based Building Energy Model
+Step_B_3 = False
+if Step_B_3 == True:
+    os.makedirs(b3_output, exist_ok=True)
+    from Internal_scripts import G_2_Uno_parquet_INSPIRE_Alfanumerico_y_CEE
+
+    # The path to the INSPIRE and alphanumeric cadastres (step A.2 and A.3) (remember to use the data from the cadastre with the climatic zone from the previous step)
+    cadastres_files = r'National_enhanced_building_stock_GIS_model\National_enhanced_building_stock_GIS_model.parquet' # The path to the cadastres combined (step B.2)
+    EPC_files = r'Energy_performance_model\Energy_performance_model.gzip' # The path to the EPCs files (step B.1)
+    B_3_model_name = r'\National-scale_EPC-based_Building_Energy_Model' # The name of the output file of the B.3 step
+
+    # Part 1: Tabular data
+    Tabular_data = True
+    if Tabular_data == True:
+        G_2_Uno_parquet_INSPIRE_Alfanumerico_y_CEE.combine_cadastres_with_EPCs (cadastres_files, EPC_files, b3_output, B_3_model_name)
+
+    # Part 2: GIS map
+    GIS_data = True
+    if GIS_data == True:
+        G_2_Uno_parquet_INSPIRE_Alfanumerico_y_CEE.combine_cadastres_with_EPCs_GIS (cadastres_files, EPC_files, b3_output, B_3_model_name)
+
 print ('All active steps have been completed.')
+
