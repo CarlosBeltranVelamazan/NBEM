@@ -88,8 +88,8 @@ def RiojaDB(archivo):
 
         # Elimino los certificados duplicados quedandome con el más reciente
         EPC_antes_de_duplicados = df.shape[0]
-        df['FECHA_VALIDEZ'] = df['FECHA_VALIDEZ'].str[:10]
-        df['FECHA_VALIDEZ'] = pd.to_datetime(df['FECHA_VALIDEZ'].str.strip(), dayfirst=True)
+     #   df['FECHA_VALIDEZ'] = df['FECHA_VALIDEZ'].str[:10]
+        df['FECHA_VALIDEZ'] = pd.to_datetime(df['FECHA_VALIDEZ'].str.strip())
         df.sort_values(by='FECHA_VALIDEZ',ascending=False, inplace=True)
         df = (df.groupby(['ReferenciaCatastral']).agg(
                         #         ReferenciaCatastral = ('ReferenciaCatastral', 'first'), \

@@ -33,30 +33,22 @@ def NavarraDB(archivo):
 
     sepcol = df["EnergiaPrimNoRenovable"].str.split(';', expand=True)
     sepcol.columns = ['Global', 'Calefacción', 'Refrigeración', 'ACS', 'Iluminación']
-    sepcol2 = sepcol['Global'].str.split(':', expand=True)
+    sepcol2 = sepcol['Global'].str.split(': ', expand=True)
     sepcol2.columns = ['Texto', 'ValorEPnorenovable']
     eleventh_column = sepcol2.pop('ValorEPnorenovable')
     df.insert(15, 'Consumo_energía_primaria', eleventh_column) # Consumo_energía_primaria (kWh/m2año)
 
-    sepcol3 = df["CalificacionEnergiaPrimariaNoRenovable"].str.split(';', expand=True)
-    sepcol3.columns = ['Global', 'Calefacción', 'Refrigeración', 'ACS', 'Iluminación']
-    sepcol4 = sepcol3['Global'].str.split(':', expand=True)
-    sepcol4.columns = ['Texto', 'LetraEPnorenovable']
-    eleventh_column = sepcol4.pop('LetraEPnorenovable')
+    eleventh_column = df.pop('CalificacionEnePrinNoRenovGlobal')
     df.insert(16, 'Calificación_consumo_energía', eleventh_column) 
 
     sepcol5 = df["EmisionesCO2"].str.split(';', expand=True)
     sepcol5.columns = ['Global', 'Calefacción', 'Refrigeración', 'ACS', 'Iluminación', 'Cons.Eléctrico', 'Cons.Otros', 'Tot.Cons.Electrico', 'Tot.Cons.Otros']
-    sepcol6 = sepcol5['Global'].str.split(':', expand=True)
+    sepcol6 = sepcol5['Global'].str.split(': ', expand=True)
     sepcol6.columns = ['Texto', 'Emisiones']
     eleventh_column = sepcol6.pop('Emisiones')
     df.insert(17, 'Emisiones_CO2', eleventh_column) # Emisiones CO2 (kgCO2/m2año)
 
-    sepcol7 = df["CalificacionEmisionesCO2"].str.split(';', expand=True)
-    sepcol7.columns = ['Global', 'Calefacción', 'Refrigeración', 'ACS', 'Iluminación']
-    sepcol8 = sepcol7['Global'].str.split(':', expand=True)
-    sepcol8.columns = ['Texto', 'LetraCO2']
-    eleventh_column = sepcol8.pop('LetraCO2')
+    eleventh_column = df.pop('CalificacionEmiCO2Global')
     df.insert(18, 'Calificación_emisiones', eleventh_column) 
 
     #df.insert(19, 'Calificación_general_del_edificio', "") 
@@ -66,9 +58,7 @@ def NavarraDB(archivo):
     eleventh_column = sepcol6.pop('Emisiones')
     df.insert(19, 'Emisiones_calefacción', eleventh_column) 
 
-    sepcol8 = sepcol7['Calefacción'].str.split(':', expand=True)
-    sepcol8.columns = ['Texto', 'LetraCO2']
-    eleventh_column = sepcol8.pop('LetraCO2')
+    eleventh_column = df.pop('CalificacionEmiCO2Calefaccion')
     df.insert(20, 'Calificación_emisiones_calefacción', eleventh_column) 
 
     sepcol2 = sepcol['Calefacción'].str.split(':', expand=True)
@@ -76,9 +66,7 @@ def NavarraDB(archivo):
     eleventh_column = sepcol2.pop('ValorEPnorenovable')
     df.insert(21, 'Consumo_calefacción', eleventh_column) 
 
-    sepcol4 = sepcol3['Calefacción'].str.split(':', expand=True)
-    sepcol4.columns = ['Texto', 'LetraEPnorenovable']
-    eleventh_column = sepcol4.pop('LetraEPnorenovable') 
+    eleventh_column = df.pop('CalificacionEnePrinNoRenovCalefaccion') 
     df.insert(22, 'Calificación_consumo_calefacción', eleventh_column) 
 
     sepcol6 = sepcol5['Refrigeración'].str.split(':', expand=True)
@@ -86,9 +74,7 @@ def NavarraDB(archivo):
     eleventh_column = sepcol6.pop('Emisiones')
     df.insert(23, 'Emisiones_refrigeración', eleventh_column) 
 
-    sepcol8 = sepcol7['Refrigeración'].str.split(':', expand=True)
-    sepcol8.columns = ['Texto', 'LetraCO2']
-    eleventh_column = sepcol8.pop('LetraCO2')
+    eleventh_column = df.pop('CalificacionEmiCO2Refrigeracion')
     df.insert(24, 'Calificación_emisiones_refrigeración', eleventh_column) 
 
     sepcol2 = sepcol['Refrigeración'].str.split(':', expand=True)
@@ -96,9 +82,7 @@ def NavarraDB(archivo):
     eleventh_column = sepcol2.pop('ValorEPnorenovable')
     df.insert(25, 'Consumo_refrigeración', eleventh_column) 
 
-    sepcol4 = sepcol3['Refrigeración'].str.split(':', expand=True)
-    sepcol4.columns = ['Texto', 'LetraEPnorenovable']
-    eleventh_column = sepcol4.pop('LetraEPnorenovable') 
+    eleventh_column = df.pop('CalificacionEnePrinNoRenovRefrigeracion') 
     df.insert(26, 'Calificación_consumo_refrigeración', eleventh_column) 
 
     sepcol6 = sepcol5['ACS'].str.split(':', expand=True)
@@ -106,9 +90,7 @@ def NavarraDB(archivo):
     eleventh_column = sepcol6.pop('Emisiones')
     df.insert(27, 'Emisiones_ACS', eleventh_column) 
 
-    sepcol8 = sepcol7['ACS'].str.split(':', expand=True)
-    sepcol8.columns = ['Texto', 'LetraCO2']
-    eleventh_column = sepcol8.pop('LetraCO2')
+    eleventh_column = df.pop('CalificacionEmiCO2ACS')
     df.insert(28, 'Calificación_emisiones_ACS', eleventh_column) 
 
     sepcol2 = sepcol['ACS'].str.split(':', expand=True)
@@ -116,9 +98,7 @@ def NavarraDB(archivo):
     eleventh_column = sepcol2.pop('ValorEPnorenovable')
     df.insert(29, 'Consumo_ACS', eleventh_column) 
 
-    sepcol4 = sepcol3['ACS'].str.split(':', expand=True)
-    sepcol4.columns = ['Texto', 'LetraEPnorenovable']
-    eleventh_column = sepcol4.pop('LetraEPnorenovable') 
+    eleventh_column = df.pop('CalificacionEnePrinNoRenovACS') 
     df.insert(30, 'Calificación_consumo_ACS', eleventh_column) 
 
     sepcol6 = sepcol5['Iluminación'].str.split(':', expand=True)
@@ -126,9 +106,7 @@ def NavarraDB(archivo):
     eleventh_column = sepcol6.pop('Emisiones')
     df.insert(31, 'Emisiones_iluminación', eleventh_column) 
 
-    sepcol8 = sepcol7['Iluminación'].str.split(':', expand=True)
-    sepcol8.columns = ['Texto', 'LetraCO2']
-    eleventh_column = sepcol8.pop('LetraCO2')
+    eleventh_column = df.pop('CalificacionEmiCO2Iluminacion')
     df.insert(32, 'Calificación_emisiones_iluminación', eleventh_column) 
 
     sepcol2 = sepcol['Iluminación'].str.split(':', expand=True)
@@ -136,9 +114,7 @@ def NavarraDB(archivo):
     eleventh_column = sepcol2.pop('ValorEPnorenovable') 
     df.insert(33, 'Consumo_iluminación', eleventh_column) 
 
-    sepcol4 = sepcol3['Iluminación'].str.split(':', expand=True)
-    sepcol4.columns = ['Texto', 'LetraEPnorenovable']
-    eleventh_column = sepcol4.pop('LetraEPnorenovable')   
+    eleventh_column = df.pop('CalificacionEnePrinNoRenovIluminacion')   
     df.insert(34, 'Calificación_consumo_iluminación', eleventh_column) 
 
     eleventh_column = df.pop('NormativaVigente')

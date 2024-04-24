@@ -96,7 +96,7 @@ def AragónDB(archivo):
     # Elimino los certificados duplicados quedandome con el más reciente
     EPC_antes_de_duplicados = df.shape[0]
     df['fec_emision'] = df['fec_emision'].str[:10]
-    df['fec_emision'] = pd.to_datetime(df['fec_emision'], infer_datetime_format=True, errors = 'coerce')
+    df['fec_emision'] = pd.to_datetime(df['fec_emision'], errors = 'coerce')    # infer_datetime_format=True,  is deprecated and will be removed
     df.sort_values(by='fec_emision',ascending=False, inplace=True)
     df = (df.groupby(['ReferenciaCatastral']).agg(
                     #    ReferenciaCatastral = ('ReferenciaCatastral', 'first'), \

@@ -3,8 +3,10 @@ def CYLDB(archivo):
         import pandas as pd
         import numpy as np
         import xlrd 
-        df = (pd.read_excel(archivo, skiprows=0)
-                .dropna(how='all', axis=1))
+        try:
+                df = pd.read_excel(archivo, skiprows=0).dropna(how='all', axis=1)
+        except:
+                df = pd.read_csv(archivo, skiprows=0, sep= ';').dropna(how='all', axis=1)
         first_column = df.pop('Ref. Catastral').str.strip()
         df.insert(0, 'ReferenciaCatastral', first_column) 
         sepcol = df["Dirección"].str.split('CP:', expand=True)
@@ -99,7 +101,7 @@ def CYLDB(archivo):
 
         # Elimino los certificados duplicados quedandome con el más reciente
         EPC_antes_de_duplicados = df.shape[0]
-        df['Fecha de inscripción'] = pd.to_datetime(df['Fecha de inscripción'].str.strip(), dayfirst=True)
+        df['Fecha de inscripción'] = pd.to_datetime(df['Fecha de inscripción'].str.strip())
         df.sort_values(by='Fecha de inscripción',ascending=False, inplace=True)
         df = (df.groupby(['ReferenciaCatastral']).agg(
                         #         ReferenciaCatastral = ('ReferenciaCatastral', 'first'), \
