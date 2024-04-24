@@ -9,10 +9,10 @@ def Filtrar_fecha (CCAA, Fecha_filtro, Carpeta_archivos_leer):
     print ('Empieza a separar por anteriores o iguales a ' + str(Fecha_filtro) + ' y posteriores')
 
     # Crea la carpeta donde se almacenarán los archivos modificados
-    os.makedirs('Separados_por_fecha', exist_ok=True)
-    os.makedirs('Separados_por_fecha\BBDD_Anteriores_a_1_1_' + str(Fecha_filtro + 1), exist_ok=True)
-    os.makedirs('Separados_por_fecha\Posteriores_a_1_1_' + str(Fecha_filtro + 1), exist_ok=True)
-    os.makedirs('Separados_por_fecha\Errores_en_la_fecha_' + str(Fecha_filtro + 1), exist_ok=True)
+    os.makedirs(r'Separados_por_fecha', exist_ok=True)
+    os.makedirs(r'Separados_por_fecha\BBDD_Anteriores_a_1_1_' + str(Fecha_filtro + 1), exist_ok=True)
+    os.makedirs(r'Separados_por_fecha\Posteriores_a_1_1_' + str(Fecha_filtro + 1), exist_ok=True)
+    os.makedirs(r'Separados_por_fecha\Errores_en_la_fecha_' + str(Fecha_filtro + 1), exist_ok=True)
 
     # Crea el informe de número de errores encontrados
     informeBBDD = pd.DataFrame(columns=('Archivo', 'Total de certificados', 'Total de certificados anteriores al 1/1/' + str(Fecha_filtro + 1), 'Total de certificados posteriores al 1/1/' + str(Fecha_filtro + 1), 'Total de certificados con errores en la fecha'))
@@ -48,13 +48,13 @@ def Filtrar_fecha (CCAA, Fecha_filtro, Carpeta_archivos_leer):
         Size_fallos = fallos.shape[0]
 
         if extensión == 'xlsx': # Si es un archivo de excel lo abrirá así y lo guardará luego igual
-            df.to_excel('Separados_por_fecha\BBDD_Anteriores_a_1_1_' + str(Fecha_filtro + 1) + '\\' + nombre + '.' + extensión, index=False)
-            Post_2020.to_excel('Separados_por_fecha\Posteriores_a_1_1_' + str(Fecha_filtro + 1) + '\\' + nombre + '.' + extensión, index=False)
-            fallos.to_excel('Separados_por_fecha\Errores_en_la_fecha_' + str(Fecha_filtro + 1) + '\\' + nombre + '.' + extensión, index=False)
+            df.to_excel(r'Separados_por_fecha\BBDD_Anteriores_a_1_1_' + str(Fecha_filtro + 1) + '\\' + nombre + '.' + extensión, index=False)
+            Post_2020.to_excel(r'Separados_por_fecha\Posteriores_a_1_1_' + str(Fecha_filtro + 1) + '\\' + nombre + '.' + extensión, index=False)
+            fallos.to_excel(r'Separados_por_fecha\Errores_en_la_fecha_' + str(Fecha_filtro + 1) + '\\' + nombre + '.' + extensión, index=False)
         else:                   # Así lo guardará como csv
-            df.to_csv('Separados_por_fecha\BBDD_Anteriores_a_1_1_' + str(Fecha_filtro + 1) + '\\' + nombre + '.' + extensión, index=False)
-            Post_2020.to_csv('Separados_por_fecha\Posteriores_a_1_1_' + str(Fecha_filtro + 1) + '\\' + nombre + '.' + extensión, index=False)
-            fallos.to_csv('Separados_por_fecha\Errores_en_la_fecha_' + str(Fecha_filtro + 1) + '\\' + nombre + '.' + extensión, index=False)
+            df.to_csv(r'Separados_por_fecha\BBDD_Anteriores_a_1_1_' + str(Fecha_filtro + 1) + '\\' + nombre + '.' + extensión, index=False)
+            Post_2020.to_csv(r'Separados_por_fecha\Posteriores_a_1_1_' + str(Fecha_filtro + 1) + '\\' + nombre + '.' + extensión, index=False)
+            fallos.to_csv(r'Separados_por_fecha\Errores_en_la_fecha_' + str(Fecha_filtro + 1) + '\\' + nombre + '.' + extensión, index=False)
 
         informe = pd.DataFrame({'Archivo':[nombre], 'Total de certificados':[Size_original],'Total de certificados anteriores al 1/1/' + str(Fecha_filtro + 1):[Size_prev_2020], 'Total de certificados posteriores al 1/1/' + str(Fecha_filtro + 1):[Size_post_2020], 'Total de certificados con errores en la fecha':[Size_fallos]})
         return informe
@@ -68,8 +68,8 @@ def Filtrar_fecha (CCAA, Fecha_filtro, Carpeta_archivos_leer):
         4: 'MOD_BALEARES.xlsx',
         5: 'MOD_CANARIAS.xlsx',
         6: 'MOD_CANTABRIA.xlsx',
-        7: 'MOD_CYL.xlsx',
-        8: 'MOD_CLM_Albacete.xlsx,MOD_CLM_CiudadReal.xlsx,MOD_CLM_Cuenca.xlsx,MOD_CLM_Guadalajara.xlsx,MOD_CLM_Toledo.xlsx',
+        7: 'MOD_CYL.csv',
+        8: 'MOD_CLM_Albacete.csv,MOD_CLM_CiudadReal.csv,MOD_CLM_Cuenca.csv,MOD_CLM_Guadalajara.csv,MOD_CLM_Toledo.csv',
         9: 'MOD_CATALUÑA.csv',
         10: 'MOD_CVALENCIANA_Alicante.xlsx,MOD_CVALENCIANA_Castellón.xlsx,MOD_CVALENCIANA_Valencia.xlsx',  
         11: 'Extremadura',
@@ -115,4 +115,4 @@ def Filtrar_fecha (CCAA, Fecha_filtro, Carpeta_archivos_leer):
             informeBBDD = pd.concat([informeBBDD, informe], axis=0)
             print (nombre + ' separado por fecha')
 
-    informeBBDD.to_excel('Separados_por_fecha\Errores_en_la_fecha_' + str(Fecha_filtro + 1) + '\\' + 'InformeErroresFecha_BBDD.xlsx', index=False)
+    informeBBDD.to_excel(r'Separados_por_fecha\Errores_en_la_fecha_' + str(Fecha_filtro + 1) + '\\' + 'InformeErroresFecha_BBDD.xlsx', index=False)

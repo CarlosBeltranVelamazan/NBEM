@@ -115,9 +115,9 @@ def EPCs (folder_read_EPC, folder_save_EPC_modificed, CCAA, Descargar_BBDD, Homo
     if Uso_BBDD == True:
         print ('Canarias, Cantabria y Navarra no dan el tipo de edificio, en solo los residenciales o terciarios estas no aparecerán')
         if Certificados_fecha_que_uso == 1:
-            Carpeta_archivos_leer = 'Separados_por_fecha\BBDD_Anteriores_a_1_1_' + str(Fecha_filtro + 1) # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
+            Carpeta_archivos_leer = r'Separados_por_fecha\BBDD_Anteriores_a_1_1_' + str(Fecha_filtro + 1) # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
         elif Certificados_fecha_que_uso == 2:
-            Carpeta_archivos_leer = 'Separados_por_fecha\Posteriores_a_1_1_' + str(Fecha_filtro + 1) # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
+            Carpeta_archivos_leer = r'Separados_por_fecha\Posteriores_a_1_1_' + str(Fecha_filtro + 1) # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
         else:
             Carpeta_archivos_leer = Carpeta_archivos_guardar # Por defecto 'BBDD_Modificadas'
         from Internal_scripts import A_2_2_Filtrar_por_residencial_o_terciario
@@ -128,15 +128,15 @@ def EPCs (folder_read_EPC, folder_save_EPC_modificed, CCAA, Descargar_BBDD, Homo
     if Detectar_errores == True:
         print ('Canarias, Cantabria y Navarra no dan el tipo de edificio, si se filtran solo los residenciales o terciarios estas no aparecerán')
         if Certificados_fecha_que_uso == 1:
-            Carpeta_archivos_leer = 'Separados_por_fecha\BBDD_Anteriores_a_1_1_' + str(Fecha_filtro + 1) # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
+            Carpeta_archivos_leer = r'Separados_por_fecha\BBDD_Anteriores_a_1_1_' + str(Fecha_filtro + 1) # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
         elif Certificados_fecha_que_uso == 2:
-            Carpeta_archivos_leer = 'Separados_por_fecha\Posteriores_a_1_1_' + str(Fecha_filtro + 1) # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
+            Carpeta_archivos_leer = r'Separados_por_fecha\Posteriores_a_1_1_' + str(Fecha_filtro + 1) # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
         else:
             Carpeta_archivos_leer = Carpeta_archivos_guardar # Por defecto 'BBDD_Modificadas'
         if Certificados_uso == 1:
-            Carpeta_archivos_leer = 'BBDD_Residencial_Terciario\BBDD_Residencial_'  + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_2_Filtrar_por_residencial_o_terciario
+            Carpeta_archivos_leer = r'BBDD_Residencial_Terciario\BBDD_Residencial_'  + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_2_Filtrar_por_residencial_o_terciario
         elif Certificados_uso == 2:
-            Carpeta_archivos_leer = 'BBDD_Residencial_Terciario\BBDD_Terciario_'  + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_2_Filtrar_por_residencial_o_terciario
+            Carpeta_archivos_leer = r'BBDD_Residencial_Terciario\BBDD_Terciario_'  + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_2_Filtrar_por_residencial_o_terciario
         from Internal_scripts import A_3_Eliminar_datos_incorrectos
         A_3_Eliminar_datos_incorrectos.Filtrar_errores (CCAA, Carpeta_archivos_leer, Certificados_uso, Fecha_dato)
     duracion_A_3 = time() - inicio
@@ -145,22 +145,22 @@ def EPCs (folder_read_EPC, folder_save_EPC_modificed, CCAA, Descargar_BBDD, Homo
     if Unir_RefCat == True:
         try:
             if Certificados_uso == 0:
-                Carpeta_archivos_leer = 'BBDD_ErroresEliminados\Todos los certificados_' + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
+                Carpeta_archivos_leer = r'BBDD_ErroresEliminados\Todos los certificados_' + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
             elif Certificados_uso == 1:
-                Carpeta_archivos_leer = 'BBDD_ErroresEliminados\Residencial_' + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
+                Carpeta_archivos_leer = r'BBDD_ErroresEliminados\Residencial_' + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
             elif Certificados_uso == 2:
-                Carpeta_archivos_leer = 'BBDD_ErroresEliminados\Terciario_' + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
+                Carpeta_archivos_leer = r'BBDD_ErroresEliminados\Terciario_' + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
         except:
             if Certificados_fecha_que_uso == 1:
-                Carpeta_archivos_leer = 'Separados_por_fecha\BBDD_Anteriores_a_1_1_' + str(Fecha_filtro + 1) # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
+                Carpeta_archivos_leer = r'Separados_por_fecha\BBDD_Anteriores_a_1_1_' + str(Fecha_filtro + 1) # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
             elif Certificados_fecha_que_uso == 2:
-                Carpeta_archivos_leer = 'Separados_por_fecha\Posteriores_a_1_1_' + str(Fecha_filtro + 1) # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
+                Carpeta_archivos_leer = r'Separados_por_fecha\Posteriores_a_1_1_' + str(Fecha_filtro + 1) # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
             else:
                 Carpeta_archivos_leer = Carpeta_archivos_guardar # Por defecto 'BBDD_Modificadas'
             if Certificados_uso == 1:
-                Carpeta_archivos_leer = 'BBDD_Residencial_Terciario\BBDD_Residencial_'  + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_2_Filtrar_por_residencial_o_terciario
+                Carpeta_archivos_leer = r'BBDD_Residencial_Terciario\BBDD_Residencial_'  + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_2_Filtrar_por_residencial_o_terciario
             elif Certificados_uso == 2:
-                Carpeta_archivos_leer = 'BBDD_Residencial_Terciario\BBDD_Terciario_'  + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_2_Filtrar_por_residencial_o_terciario
+                Carpeta_archivos_leer = r'BBDD_Residencial_Terciario\BBDD_Terciario_'  + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_2_Filtrar_por_residencial_o_terciario
 
         from Internal_scripts import A_4_Unir_certificados_por_referencia_catastral
         A_4_Unir_certificados_por_referencia_catastral.Unir (CCAA, Carpeta_archivos_leer, Certificados_uso, Fecha_dato)
@@ -172,37 +172,37 @@ def EPCs (folder_read_EPC, folder_save_EPC_modificed, CCAA, Descargar_BBDD, Homo
 
     # Crea la carpeta donde se almacenarán los archivos unidos por Referencia Catastral
     os.makedirs('BBDD_Unidas por Referencia Catastral', exist_ok=True)
-    Carpeta_archivos_guardar = 'BBDD_Unidas por Referencia Catastral'
+    Carpeta_archivos_guardar = r'BBDD_Unidas por Referencia Catastral'
     if Unir_BBDD_España == True:
         if CEE_unidos_por_edificio == 1:
             if Certificados_uso == 0:
-                Carpeta_archivos_leer = 'BBDD_Unidas por Referencia Catastral\Todos los certificados_' + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
+                Carpeta_archivos_leer = r'BBDD_Unidas por Referencia Catastral\Todos los certificados_' + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
             elif Certificados_uso == 1:
-                Carpeta_archivos_leer = 'BBDD_Unidas por Referencia Catastral\Residencial_' + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
+                Carpeta_archivos_leer = r'BBDD_Unidas por Referencia Catastral\Residencial_' + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
             elif Certificados_uso == 2:
-                Carpeta_archivos_leer = 'BBDD_Unidas por Referencia Catastral\Terciario_' + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
+                Carpeta_archivos_leer = r'BBDD_Unidas por Referencia Catastral\Terciario_' + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
             from Internal_scripts import A_5_Unir_certificados_todas_las_BBDD_de_certificados
             A_5_Unir_certificados_todas_las_BBDD_de_certificados.Unir_BBDD (CCAA, Carpeta_archivos_leer, Carpeta_archivos_guardar, Certificados_uso, Fecha_dato, CEE_unidos_por_edificio)
 
         elif CEE_unidos_por_edificio == 0:
             try:
                 if Certificados_uso == 0:
-                    Carpeta_archivos_leer = 'BBDD_ErroresEliminados\Todos los certificados_' + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
+                    Carpeta_archivos_leer = r'BBDD_ErroresEliminados\Todos los certificados_' + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
                 elif Certificados_uso == 1:
-                    Carpeta_archivos_leer = 'BBDD_ErroresEliminados\Residencial_' + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
+                    Carpeta_archivos_leer = r'BBDD_ErroresEliminados\Residencial_' + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
                 elif Certificados_uso == 2:
-                    Carpeta_archivos_leer = 'BBDD_ErroresEliminados\Terciario_' + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
+                    Carpeta_archivos_leer = r'BBDD_ErroresEliminados\Terciario_' + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
             except:
                 if Certificados_fecha_que_uso == 1:
-                    Carpeta_archivos_leer = 'Separados_por_fecha\BBDD_Anteriores_a_1_1_' + str(Fecha_filtro + 1) # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
+                    Carpeta_archivos_leer = r'Separados_por_fecha\BBDD_Anteriores_a_1_1_' + str(Fecha_filtro + 1) # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
                 elif Certificados_fecha_que_uso == 2:
-                    Carpeta_archivos_leer = 'Separados_por_fecha\Posteriores_a_1_1_' + str(Fecha_filtro + 1) # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
+                    Carpeta_archivos_leer = r'Separados_por_fecha\Posteriores_a_1_1_' + str(Fecha_filtro + 1) # No cambiar esta ruta, o redefinir también en A_2_1_Filtrar_por_fecha
                 else:
                     Carpeta_archivos_leer = Carpeta_archivos_guardar # Por defecto 'BBDD_Modificadas'
                 if Certificados_uso == 1:
-                    Carpeta_archivos_leer = 'BBDD_Residencial_Terciario\BBDD_Residencial_'  + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_2_Filtrar_por_residencial_o_terciario
+                    Carpeta_archivos_leer = r'BBDD_Residencial_Terciario\BBDD_Residencial_'  + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_2_Filtrar_por_residencial_o_terciario
                 elif Certificados_uso == 2:
-                    Carpeta_archivos_leer = 'BBDD_Residencial_Terciario\BBDD_Terciario_'  + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_2_Filtrar_por_residencial_o_terciario
+                    Carpeta_archivos_leer = r'BBDD_Residencial_Terciario\BBDD_Terciario_'  + Fecha_dato # No cambiar esta ruta, o redefinir también en A_2_2_Filtrar_por_residencial_o_terciario
             from Internal_scripts import A_5_Unir_certificados_todas_las_BBDD_de_certificados
             A_5_Unir_certificados_todas_las_BBDD_de_certificados.Unir_BBDD (CCAA, Carpeta_archivos_leer, Carpeta_archivos_guardar, Certificados_uso, Fecha_dato, CEE_unidos_por_edificio)
     duracion_A_5 = time() - inicio
@@ -247,7 +247,7 @@ def EPCs (folder_read_EPC, folder_save_EPC_modificed, CCAA, Descargar_BBDD, Homo
         from Internal_scripts import F_11_EPC_inscritos_por_año
         Carpeta_archivos_descargas = folder_read_EPC  # La carpeta donde se guardarán los nuevos archivos descargados
         Carpeta_archivos_leer = Carpeta_archivos_descargas   # La carpeta de donde se leerán los archivos
-        Carpeta_archivos_guardar = 'Información_Complementaria'        # La carpeta donde se guardarán los nuevos archivos
+        Carpeta_archivos_guardar = r'Información_Complementaria'        # La carpeta donde se guardarán los nuevos archivos
         os.makedirs(Carpeta_archivos_guardar, exist_ok=True)
         F_11_EPC_inscritos_por_año.Homogeneizar (CCAA, Carpeta_archivos_leer, Carpeta_archivos_guardar, Quitar_extras)
 

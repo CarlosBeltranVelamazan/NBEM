@@ -31,25 +31,25 @@ def Unir_BBDD (CCAA, Carpeta_archivos_leer, Carpeta_archivos_guardar, Certificad
 
         # Importante: Para que Canarias y Cantabria que no filtran por residencial y terciario estuvieran del tirón lo he filtrado así, con un 1 se suman sus certificados aunque sean todos y no sólo residenciales o terciarios
         Arreglo = 0                                                  # No se recomienda ponerlo en 1, mezcla temas diversos y no aporta mucho
-        Carpeta_arreglo = 'BBDD_Unidas por Referencia Catastral\Todos los certificados_' + Fecha_dato
+        Carpeta_arreglo = r'BBDD_Unidas por Referencia Catastral\Todos los certificados_' + Fecha_dato
 
         # Asturias
         if CCAA == 0 or CCAA == 3:
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_ASTURIAS.xlsx'
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_ASTURIAS.xlsx'
                 df = (pd.read_excel(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Asturias unida')
                 
         # Aragón
         if CCAA == 0 or CCAA == 2:
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_ARAGÓN.xlsx'
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_ARAGÓN.xlsx'
                 df = (pd.read_excel(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Aragón unida')
 
         # Baleares
         if CCAA == 0 or CCAA == 4:
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_BALEARES.xlsx'
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_BALEARES.xlsx'
                 df = (pd.read_excel(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Baleares unida')
@@ -57,12 +57,12 @@ def Unir_BBDD (CCAA, Carpeta_archivos_leer, Carpeta_archivos_guardar, Certificad
         # Canarias
         if CCAA == 0 or CCAA == 5:
                 if TipoEdificio == 0:
-                        archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CANARIAS.xlsx'
+                        archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_CANARIAS.xlsx'
                         df = (pd.read_excel(archivo, usecols= quitar))
                         GranBBDD = pd.concat([GranBBDD, df], axis=0)
                         print ('BBDD Canarias unida')
                 elif TipoEdificio != 0 and Arreglo == 1:
-                        archivo = Carpeta_arreglo + '\MOD_CANARIAS.xlsx'
+                        archivo = Carpeta_arreglo + r'\MOD_CANARIAS.xlsx'
                         df = (pd.read_excel(archivo, usecols= quitar))
                         GranBBDD = pd.concat([GranBBDD, df], axis=0)
                         print ('BBDD Canarias unida')
@@ -70,64 +70,64 @@ def Unir_BBDD (CCAA, Carpeta_archivos_leer, Carpeta_archivos_guardar, Certificad
         # Cantabria
         if CCAA == 0 or CCAA == 6:
                 if TipoEdificio == 0:
-                        archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CANTABRIA.xlsx'
+                        archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_CANTABRIA.xlsx'
                         df = (pd.read_excel(archivo, usecols= quitar))
                         GranBBDD = pd.concat([GranBBDD, df], axis=0)
                         print ('BBDD Cantabria unida')
                 elif TipoEdificio != 0 and Arreglo == 1:
-                        archivo = Carpeta_arreglo + '\MOD_CANTABRIA.xlsx'
+                        archivo = Carpeta_arreglo + r'\MOD_CANTABRIA.xlsx'
                         df = (pd.read_excel(archivo, usecols= quitar))
                         GranBBDD = pd.concat([GranBBDD, df], axis=0)
                         print ('BBDD Cantabria unida')
 
         # Castilla Y León
         if CCAA == 0 or CCAA == 7:
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CYL.xlsx'
-                df = (pd.read_excel(archivo, usecols= quitar))
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_CYL.csv'
+                df = (pd.read_csv(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Castilla y León unida')
 
         # Castilla La Mancha
         if CCAA == 0 or CCAA == 8:
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CLM_Toledo.xlsx'
-                df = (pd.read_excel(archivo, usecols= quitar))
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_CLM_Toledo.csv'
+                df = (pd.read_csv(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Castilla La Mancha (Toledo) unida')
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CLM_Guadalajara.xlsx'
-                df = (pd.read_excel(archivo, usecols= quitar))
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_CLM_Guadalajara.csv'
+                df = (pd.read_csv(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Castilla La Mancha (Guadalajara) unida')
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CLM_Cuenca.xlsx'
-                df = (pd.read_excel(archivo, usecols= quitar))
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_CLM_Cuenca.csv'
+                df = (pd.read_csv(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Castilla La Mancha (Cuenca) unida')
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CLM_CiudadReal.xlsx'
-                df = (pd.read_excel(archivo, usecols= quitar))
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_CLM_CiudadReal.csv'
+                df = (pd.read_csv(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Castilla La Mancha (Ciudad Real) unida')
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CLM_Albacete.xlsx'
-                df = (pd.read_excel(archivo, usecols= quitar))
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_CLM_Albacete.csv'
+                df = (pd.read_csv(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Castilla La Mancha (Albacete) unida')
 
         # Cataluña
         if CCAA == 0 or CCAA == 9:
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CATALUÑA.csv'
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_CATALUÑA.csv'
                 df = (pd.read_csv(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Cataluña unida')
 
         # Comunidad Valenciana
         if CCAA == 0 or CCAA == 10:
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CVALENCIANA_Alicante.xlsx'
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_CVALENCIANA_Alicante.xlsx'
                 df = (pd.read_excel(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Comunidad Valenciana (Alicante) unida')
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CVALENCIANA_Valencia.xlsx'
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_CVALENCIANA_Valencia.xlsx'
                 df = (pd.read_excel(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Comunidad Valenciana (Valencia) unida')
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CVALENCIANA_Castellón.xlsx'
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_CVALENCIANA_Castellón.xlsx'
                 df = (pd.read_excel(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Comunidad Valenciana (Castellón) unida')
@@ -136,63 +136,63 @@ def Unir_BBDD (CCAA, Carpeta_archivos_leer, Carpeta_archivos_guardar, Certificad
         if CCAA == 0 or CCAA == 15:
                 if TipoEdificio == 0:
                         try:
-                                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_NAVARRA.xlsx'
+                                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_NAVARRA.xlsx'
                                 df = (pd.read_excel(archivo, usecols= quitar))
                                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                                 print ('BBDD Navarra unida')
                         except:
                                 print ('BBDD Navarra no se pudo unir porque no posee la referencia catastral')
                 elif TipoEdificio != 0 and Arreglo == 1:
-                        archivo = Carpeta_arreglo + '\MOD_NAVARRA.xlsx'
+                        archivo = Carpeta_arreglo + r'\MOD_NAVARRA.xlsx'
                         df = (pd.read_excel(archivo, usecols= quitar))
                         GranBBDD = pd.concat([GranBBDD, df], axis=0)
                         print ('BBDD Navarra unida')
 
         # La Rioja
         if CCAA == 0 or CCAA == 17:
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_RIOJA.xlsx'
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_RIOJA.xlsx'
                 df = (pd.read_excel(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD La Rioja unida')
 
         # Andalucía
         if CCAA == 0 or CCAA == 1:
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_ANDALUCÍA_Almería.xlsx'
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_ANDALUCÍA_Almería.xlsx'
                 df = (pd.read_excel(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Andalucía (Almería) unida')
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_ANDALUCÍA_Cádiz.xlsx'
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_ANDALUCÍA_Cádiz.xlsx'
                 df = (pd.read_excel(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Andalucía (Cádiz) unida')
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_ANDALUCÍA_Córdoba.xlsx'
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_ANDALUCÍA_Córdoba.xlsx'
                 df = (pd.read_excel(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Andalucía (Córdoba) unida')
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_ANDALUCÍA_Granada.xlsx'
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_ANDALUCÍA_Granada.xlsx'
                 df = (pd.read_excel(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Andalucía (Granada) unida')
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_ANDALUCÍA_Huelva.xlsx'
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_ANDALUCÍA_Huelva.xlsx'
                 df = (pd.read_excel(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Andalucía (Huelva) unida')
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_ANDALUCÍA_Jaén.xlsx'
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_ANDALUCÍA_Jaén.xlsx'
                 df = (pd.read_excel(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Andalucía (Jaén) unida')
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_ANDALUCÍA_Malaga.xlsx'
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_ANDALUCÍA_Malaga.xlsx'
                 df = (pd.read_excel(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Andalucía (Malaga) unida')
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_ANDALUCÍA_Sevilla.xlsx'
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_ANDALUCÍA_Sevilla.xlsx'
                 df = (pd.read_excel(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Andalucía (Sevilla) unida')
 
         # Galicia
         if CCAA == 0 or CCAA == 12:
-                archivo = switch_BBDD.get(TipoEdificio) + '\MOD_GALICIA.xlsx'
+                archivo = switch_BBDD.get(TipoEdificio) + r'\MOD_GALICIA.xlsx'
                 df = (pd.read_excel(archivo, usecols= quitar))
                 GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 print ('BBDD Galicia unida')

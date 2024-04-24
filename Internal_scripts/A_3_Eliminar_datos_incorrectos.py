@@ -201,7 +201,7 @@ def Filtrar_errores (CCAA, Carpeta_archivos_leer, Certificados_uso, Fecha_dato):
     # Castilla Y León
     if CCAA == 0 or CCAA == 7:
         # Ruta relativa hasta la BBDD ya homogeneizada
-        archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CYL.xlsx'
+        archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CYL.csv'
         # Escoger qué errores queremos filtrar en cada BBDD
         eliminar_errores_ReferenciaCatastral = 0
         eliminar_errores_CP = 0                                 
@@ -220,7 +220,7 @@ def Filtrar_errores (CCAA, Carpeta_archivos_leer, Certificados_uso, Fecha_dato):
             fallos = fallos.drop(['Unnamed: 0'], axis=1)
         except:
             pass
-        df.to_excel(switch_BBDD_guardar.get(TipoEdificio) + '\MOD_CYL.xlsx', index=False)
+        df.to_csv(switch_BBDD_guardar.get(TipoEdificio) + '\MOD_CYL.csv', index=False)
         fallos.to_excel(switch_BBDD_guardar.get(TipoEdificio) + '\CertificadosconFallos_MOD_CYL.xlsx', index=False)
         erroresBBDD = pd.concat([erroresBBDD, errores], axis=0)
         print ('BBDD Castilla y León creada')
@@ -237,7 +237,7 @@ def Filtrar_errores (CCAA, Carpeta_archivos_leer, Certificados_uso, Fecha_dato):
         eliminar_errores_Emisiones_CO2 = 0                      # Como Castilla La Mancha no da este dato el valor debe ser 0 o dará resultados negativos
         eliminar_errores_Calificación_emisiones = 1
         # Cada provincia por separado: Ruta relativa hasta la BBDD ya homogeneizada, ejecuta el script y guarda el resultado
-        archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CLM_Toledo.xlsx'
+        archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CLM_Toledo.csv'
         ccaa = 'Castilla La Mancha (Toledo)'
         df, errores, fallos = Script_Datos_incorrectos_Castilla_La_Mancha.Eliminar_errores(archivo, eliminar_errores_ReferenciaCatastral, eliminar_errores_CP, eliminar_errores_Consumo_energía_primaria, eliminar_errores_Calificación_consumo_energía, eliminar_errores_Emisiones_CO2, eliminar_errores_Calificación_emisiones, eliminar_errores_FechaConstrucción, eliminar_errores_SuperficieUtil, ccaa)
         # El filtrado de errores nos crea algunas columnas de índices, esta es una forma de eliminarlos
@@ -246,11 +246,11 @@ def Filtrar_errores (CCAA, Carpeta_archivos_leer, Certificados_uso, Fecha_dato):
             fallos = fallos.drop(['Unnamed: 0'], axis=1)
         except:
             pass
-        df.to_excel(switch_BBDD_guardar.get(TipoEdificio) + '\MOD_CLM_Toledo.xlsx', index=False)
+        df.to_csv(switch_BBDD_guardar.get(TipoEdificio) + '\MOD_CLM_Toledo.csv', index=False)
         fallos.to_excel(switch_BBDD_guardar.get(TipoEdificio) + '\CertificadosconFallos_MOD_CLM_Toledo.xlsx', index=False)
         erroresBBDD = pd.concat([erroresBBDD, errores], axis=0)
         print ('BBDD Castilla La Mancha (Toledo) creada')
-        archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CLM_Guadalajara.xlsx'
+        archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CLM_Guadalajara.csv'
         ccaa = 'Castilla La Mancha (Guadalajara)'
         df, errores, fallos = Script_Datos_incorrectos_Castilla_La_Mancha.Eliminar_errores(archivo, eliminar_errores_ReferenciaCatastral, eliminar_errores_CP, eliminar_errores_Consumo_energía_primaria, eliminar_errores_Calificación_consumo_energía, eliminar_errores_Emisiones_CO2, eliminar_errores_Calificación_emisiones, eliminar_errores_FechaConstrucción, eliminar_errores_SuperficieUtil, ccaa)
         # El filtrado de errores nos crea algunas columnas de índices, esta es una forma de eliminarlos
@@ -259,11 +259,11 @@ def Filtrar_errores (CCAA, Carpeta_archivos_leer, Certificados_uso, Fecha_dato):
             fallos = fallos.drop(['Unnamed: 0'], axis=1)
         except:
             pass
-        df.to_excel(switch_BBDD_guardar.get(TipoEdificio) + '\MOD_CLM_Guadalajara.xlsx', index=False)
+        df.to_csv(switch_BBDD_guardar.get(TipoEdificio) + '\MOD_CLM_Guadalajara.csv', index=False)
         fallos.to_excel(switch_BBDD_guardar.get(TipoEdificio) + '\CertificadosconFallos_MOD_CLM_Guadalajara.xlsx', index=False)
         erroresBBDD = pd.concat([erroresBBDD, errores], axis=0)
         print ('BBDD Castilla La Mancha (Guadalajara) creada')
-        archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CLM_Cuenca.xlsx'
+        archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CLM_Cuenca.csv'
         ccaa = 'Castilla La Mancha (Cuenca)'
         df, errores, fallos = Script_Datos_incorrectos_Castilla_La_Mancha.Eliminar_errores(archivo, eliminar_errores_ReferenciaCatastral, eliminar_errores_CP, eliminar_errores_Consumo_energía_primaria, eliminar_errores_Calificación_consumo_energía, eliminar_errores_Emisiones_CO2, eliminar_errores_Calificación_emisiones, eliminar_errores_FechaConstrucción, eliminar_errores_SuperficieUtil, ccaa)
         # El filtrado de errores nos crea algunas columnas de índices, esta es una forma de eliminarlos
@@ -272,11 +272,11 @@ def Filtrar_errores (CCAA, Carpeta_archivos_leer, Certificados_uso, Fecha_dato):
             fallos = fallos.drop(['Unnamed: 0'], axis=1)
         except:
             pass
-        df.to_excel(switch_BBDD_guardar.get(TipoEdificio) + '\MOD_CLM_Cuenca.xlsx', index=False)
+        df.to_csv(switch_BBDD_guardar.get(TipoEdificio) + '\MOD_CLM_Cuenca.csv', index=False)
         fallos.to_excel(switch_BBDD_guardar.get(TipoEdificio) + '\CertificadosconFallos_MOD_CLM_Cuenca.xlsx', index=False)
         erroresBBDD = pd.concat([erroresBBDD, errores], axis=0)
         print ('BBDD Castilla La Mancha (Cuenca) creada')
-        archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CLM_CiudadReal.xlsx'
+        archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CLM_CiudadReal.csv'
         ccaa = 'Castilla La Mancha (Ciudad Real)'
         df, errores, fallos = Script_Datos_incorrectos_Castilla_La_Mancha.Eliminar_errores(archivo, eliminar_errores_ReferenciaCatastral, eliminar_errores_CP, eliminar_errores_Consumo_energía_primaria, eliminar_errores_Calificación_consumo_energía, eliminar_errores_Emisiones_CO2, eliminar_errores_Calificación_emisiones, eliminar_errores_FechaConstrucción, eliminar_errores_SuperficieUtil, ccaa)
         # El filtrado de errores nos crea algunas columnas de índices, esta es una forma de eliminarlos
@@ -285,11 +285,11 @@ def Filtrar_errores (CCAA, Carpeta_archivos_leer, Certificados_uso, Fecha_dato):
             fallos = fallos.drop(['Unnamed: 0'], axis=1)
         except:
             pass
-        df.to_excel(switch_BBDD_guardar.get(TipoEdificio) + '\MOD_CLM_CiudadReal.xlsx', index=False)
+        df.to_csv(switch_BBDD_guardar.get(TipoEdificio) + '\MOD_CLM_CiudadReal.csv', index=False)
         fallos.to_excel(switch_BBDD_guardar.get(TipoEdificio) + '\CertificadosconFallos_MOD_CLM_CiudadReal.xlsx', index=False)
         erroresBBDD = pd.concat([erroresBBDD, errores], axis=0)
         print ('BBDD Castilla La Mancha (Ciudad Real) creada')
-        archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CLM_Albacete.xlsx'
+        archivo = switch_BBDD.get(TipoEdificio) + '\MOD_CLM_Albacete.csv'
         ccaa = 'Castilla La Mancha (Albacete)'
         df, errores, fallos = Script_Datos_incorrectos_Castilla_La_Mancha.Eliminar_errores(archivo, eliminar_errores_ReferenciaCatastral, eliminar_errores_CP, eliminar_errores_Consumo_energía_primaria, eliminar_errores_Calificación_consumo_energía, eliminar_errores_Emisiones_CO2, eliminar_errores_Calificación_emisiones, eliminar_errores_FechaConstrucción, eliminar_errores_SuperficieUtil, ccaa)
         # El filtrado de errores nos crea algunas columnas de índices, esta es una forma de eliminarlos
@@ -298,7 +298,7 @@ def Filtrar_errores (CCAA, Carpeta_archivos_leer, Certificados_uso, Fecha_dato):
             fallos = fallos.drop(['Unnamed: 0'], axis=1)
         except:
             pass
-        df.to_excel(switch_BBDD_guardar.get(TipoEdificio) + '\MOD_CLM_Albacete.xlsx', index=False)
+        df.to_csv(switch_BBDD_guardar.get(TipoEdificio) + '\MOD_CLM_Albacete.csv', index=False)
         fallos.to_excel(switch_BBDD_guardar.get(TipoEdificio) + '\CertificadosconFallos_MOD_CLM_Albacete.xlsx', index=False)
         erroresBBDD = pd.concat([erroresBBDD, errores], axis=0)
         print ('BBDD Castilla La Mancha (Albacete) creada')

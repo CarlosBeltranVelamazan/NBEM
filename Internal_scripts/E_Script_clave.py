@@ -10,7 +10,9 @@
 
  #         Antes de nada debemos elegir qué queremos analizar, para ello hay una lista de decisiones, esta lista controla qué resultados obtendremos
 
-def Alphanumeric_cadastre (PROV, folder_read_files, Extract_ZIP_files, building_scale_cadastre, building_unit_scale_cadastre):
+import numpy as np
+
+def Alphanumeric_cadastre (PROV, folder_read_files, Extract_ZIP_files, building_scale_cadastre, building_unit_scale_cadastre, drop_unused_columns, columns_to_use_buildings, columns_to_use_building_units):
 
     Realizar_proceso_CatastroAlfanumérico = True           # Si quiero realizar el proceso de convertir todas las BBDD del catastro alfanumérico que hayamos descargado en datos por edificio (True o False)
 
@@ -96,7 +98,7 @@ def Alphanumeric_cadastre (PROV, folder_read_files, Extract_ZIP_files, building_
 
     # Paso 2, Provincia a provincia hará los pasos indicados y finalmente los unirá todos los archivos por edificio en uno solo, creo que es lo más rápido en términos de tiempo
 
-    Carpeta_archivos_guardar = folder_read_files + '\Datos del Catastro alfanumerico por edificio'         # La carpeta donde se guardarán los nuevos archivos
+    Carpeta_archivos_guardar = folder_read_files + r'\Datos del Catastro alfanumerico por edificio'         # La carpeta donde se guardarán los nuevos archivos
 
     # Paso 3, Para cada provincia lee los datos del .cat, los separa por tipo de registro que nos interesa y los guarda en un archivo independiente para cada tipo de registro
 
@@ -178,10 +180,11 @@ def Alphanumeric_cadastre (PROV, folder_read_files, Extract_ZIP_files, building_
             inicio_prov  = time()
             GranBBDD = pd.DataFrame()     # Aquí polars me da errores por unir int y float, para alternar entre pandas y polars hay que cambiar pd por pl en esta linea y la 231 y 232 y en la 233 el to_csv por write_csv
             carpeta_provincias = Carpeta_archivos_guardar + '\\' + 'Datos por Provincia'
+            dtype_dict = {'Provincia': str, 'CMunicipioINE': str, 'CMunicipioDGC': str, 'Tipologia_constructiva': str}   # Hay columnas como el código de provincia o de municipio que son números y se leen como int pero deberían ser strings
             if Unir_por_país_csv_o_parquet == 1:
                 with os.scandir(carpeta_provincias) as ficheros:                # Escanea la carpeta donde estarán los archivos de los datos por edificio a escala de provincia
                     for fichero in ficheros:
-                        df = (pd.read_csv(fichero))
+                        df = (pd.read_csv(fichero, dtype=dtype_dict))
                         GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 
                 # Sucede que hay referencias catastrales que van a 2 edificios diferentes, opto por agrupar y que se quede en un único edificio y fin, así elimino los errores catastrales
@@ -191,12 +194,14 @@ def Alphanumeric_cadastre (PROV, folder_read_files, Extract_ZIP_files, building_
                 if duplicados != 0:
                     print ('Se han borrado por duplicados ' + str(duplicados) + ' edificios')
 
-                GranBBDD.to_parquet(carpeta_provincias + r"\Edificios_España_Completos" + ".gzip", compression='gzip', index=False)
+                # Para guardar en formato parquet hay que definir el tipo de algunas columnas que sino dan error
+                GranBBDD['Tipologia_constructiva'] = GranBBDD['Tipologia_constructiva'].astype(str)
+                GranBBDD.to_parquet(Carpeta_archivos_guardar + r"\Edificios_España_Completos" + ".gzip", compression='gzip', index=False)
             else:
                 with os.scandir(carpeta_provincias) as ficheros:                # Escanea la carpeta donde estarán los archivos de los datos por edificio a escala de provincia
                     for fichero in ficheros:
                         print(fichero)
-                        df = (pd.read_csv(carpeta_provincias + '\\' + fichero.name))
+                        df = (pd.read_csv(carpeta_provincias + '\\' + fichero.name, dtype=dtype_dict))
                         GranBBDD = pd.concat([GranBBDD, df])
                 
                 # Sucede que hay referencias catastrales que van a 2 edificios diferentes, opto por agrupar y que se quede en un único edificio y fin, así elimino los errores catastrales
@@ -205,8 +210,44 @@ def Alphanumeric_cadastre (PROV, folder_read_files, Extract_ZIP_files, building_
                 duplicados = GranBBDD.shape[0] - pre_borrar
                 if duplicados != 0:
                     print ('Se han borrado por duplicados ' + str(duplicados) + ' edificios')
-
+                
+                # Para guardar en formato parquet hay que definir el tipo de algunas columnas que sino dan error
+                GranBBDD['Tipologia_constructiva'] = GranBBDD['Tipologia_constructiva'].astype(str)
+                GranBBDD.to_parquet(Carpeta_archivos_guardar + r"\Edificios_España_Completos" + ".gzip", compression='gzip', index=False)
                 GranBBDD.to_csv(Carpeta_archivos_guardar + r"\Edificios_España_Completos" + ".csv")
+
+            if drop_unused_columns == True:
+                GranBBDD = GranBBDD[GranBBDD.columns.intersection(columns_to_use_buildings)]
+
+                # Elimino todos los edificios que son parcelas sin edificar (lo hago por Sup_elementos_urbanos == 0, es la superficie de los bienes inmuebles sumada)
+                GranBBDD.insert(1, 'Sup_total', GranBBDD['S_Viv'] + GranBBDD['S_Almacen'] + GranBBDD['S_Ind'] + GranBBDD['S_Of'] + GranBBDD['S_Com']
+                        + GranBBDD['S_Dep'] + GranBBDD['S_Esp'] + GranBBDD['S_Host'] + GranBBDD['S_San'] + GranBBDD['S_Cult'] + GranBBDD['S_Rel'] + GranBBDD['S_Sin'] + GranBBDD['S_IAg'] + GranBBDD['S_Ag']
+                        )
+                GranBBDD['Sup_total'] = GranBBDD['Sup_total']. fillna('None')
+                GranBBDD['Coincide'] = np.where((GranBBDD['Sup_total']!= 'None'), 'Si','Bien')
+                GranBBDD = GranBBDD.loc[(GranBBDD['Coincide'] == 'Si')]
+                GranBBDD = GranBBDD.drop(['Coincide'], axis=1)
+                GranBBDD = GranBBDD.loc[GranBBDD.loc[:, 'Sup_total'] != 0]
+                GranBBDD = GranBBDD.drop(['Sup_total'], axis=1)
+
+                # Doy el uso principal del edificio, en base a la superficie del uso más grande de los bienes inmuebles del edificio
+                sup = GranBBDD.loc[:,['S_Viv', 'S_Almacen', 'S_Ind', 'S_Of', 'S_Com', 'S_Dep', 'S_Esp', 'S_Host', 'S_San', 'S_Cult', 'S_Rel', 'S_Sin', 'S_IAg', 'S_Ag']]
+                ind = np.argsort(-sup.values, axis=1)
+                uso_p = ind[:, 0]
+                GranBBDD['Uso_principal'] = pd.Series(uso_p).replace({0: 'Residencial', 1: 'Almacén-Estacionamiento', 2: 'Industrial', 
+                                                                      3: 'Oficinas', 4: 'Comercial', 5: 'Deportivo', 6: 'Espectáculos', 
+                                                                      7: 'Ocio y Hostelería', 8: 'Sanidad y Beneficencia', 9: 'Cultural', 
+                                                                      10: 'Religioso', 11: 'Edificio singular', 12: 'Industrial agrario', 
+                                                                      13: 'Agrario'
+                                                                    })
+
+                # print (df.columns)
+                GranBBDD.to_parquet(Carpeta_archivos_guardar + r"\Edificios_España_Completos" + "_Reducido" + ".gzip", compression='gzip', index=False)
+                GranBBDD.to_csv(Carpeta_archivos_guardar + r"\Edificios_España_Completos" + "_Reducido" + ".csv")
+
+
+
+
             print (GranBBDD.dtypes)
             n_edif = GranBBDD.shape[0]
             duracion_prov = time() - inicio
@@ -283,10 +324,11 @@ def Alphanumeric_cadastre (PROV, folder_read_files, Extract_ZIP_files, building_
             inicio_prov  = time()
             GranBBDD = pd.DataFrame()     # Aquí polars me da errores por unir int y float, para alternar entre pandas y polars hay que cambiar pd por pl en esta linea y la 231 y 232 y en la 233 el to_csv por write_csv
             carpeta_provincias = Carpeta_archivos_guardar + '\\' + 'Datos por Provincia_escala_BI'
+            dtype_dict = {'Provincia': str, 'CMunicipioINE_BI': str, 'CMunicipioDGC': str, 'Tipologia_constructiva': str}
             if Unir_por_país_csv_o_parquet == 1:
                 with os.scandir(carpeta_provincias) as ficheros:                # Escanea la carpeta donde estarán los archivos de los datos por edificio a escala de provincia
                     for fichero in ficheros:
-                        df = (pd.read_csv(fichero))
+                        df = (pd.read_csv(fichero, dtype=dtype_dict))
                         GranBBDD = pd.concat([GranBBDD, df], axis=0)
                 
                 # Sucede que hay referencias catastrales que van a 2 edificios diferentes, opto por agrupar y que se quede en un único edificio y fin, así elimino los errores catastrales
@@ -296,12 +338,15 @@ def Alphanumeric_cadastre (PROV, folder_read_files, Extract_ZIP_files, building_
                 if duplicados != 0:
                     print ('Se han borrado por duplicados ' + str(duplicados) + ' Bienes inmuebles')
 
-                GranBBDD.to_parquet(carpeta_provincias + r"\Edificios_España_Completos_escala_BI" + ".gzip", compression='gzip', index=False)
+                # Para guardar en formato parquet hay que definir el tipo de algunas columnas que sino dan error
+                GranBBDD['Tipologia_constructiva'] = GranBBDD['Tipologia_constructiva'].astype(str)
+
+                GranBBDD.to_parquet(Carpeta_archivos_guardar + r"\Edificios_España_Completos_escala_BI" + ".gzip", compression='gzip', index=False)
             else:
                 with os.scandir(carpeta_provincias) as ficheros:                # Escanea la carpeta donde estarán los archivos de los datos por edificio a escala de provincia
                     for fichero in ficheros:
                         print(fichero)
-                        df = (pd.read_csv(carpeta_provincias + '\\' + fichero.name))
+                        df = (pd.read_csv(carpeta_provincias + '\\' + fichero.name, dtype=dtype_dict))
                         GranBBDD = pd.concat([GranBBDD, df])
                 
                 # Sucede que hay referencias catastrales que van a 2 edificios diferentes, opto por agrupar y que se quede en un único edificio y fin, así elimino los errores catastrales
@@ -311,7 +356,40 @@ def Alphanumeric_cadastre (PROV, folder_read_files, Extract_ZIP_files, building_
                 if duplicados != 0:
                     print ('Se han borrado por duplicados ' + str(duplicados) + ' Bienes inmuebles')
 
+                # Para guardar en formato parquet hay que definir el tipo de algunas columnas que sino dan error
+                GranBBDD['Tipologia_constructiva'] = GranBBDD['Tipologia_constructiva'].astype(str)
+                GranBBDD.to_parquet(Carpeta_archivos_guardar + r"\Edificios_España_Completos_escala_BI" + ".gzip", compression='gzip', index=False)
                 GranBBDD.to_csv(Carpeta_archivos_guardar + r"\Edificios_España_Completos_escala_BI" + ".csv")
+
+            if drop_unused_columns == True:
+                GranBBDD = GranBBDD[GranBBDD.columns.intersection(columns_to_use_building_units)]
+
+                # Elimino todos los edificios que son parcelas sin edificar (lo hago por Sup_elementos_urbanos == 0, es la superficie de los bienes inmuebles sumada)
+                GranBBDD.insert(1, 'Sup_total', GranBBDD['S_Viv'] + GranBBDD['S_Almacen'] + GranBBDD['S_Ind'] + GranBBDD['S_Of'] + GranBBDD['S_Com']
+                        + GranBBDD['S_Dep'] + GranBBDD['S_Esp'] + GranBBDD['S_Host'] + GranBBDD['S_San'] + GranBBDD['S_Cult'] + GranBBDD['S_Rel'] + GranBBDD['S_Sin'] + GranBBDD['S_IAg'] + GranBBDD['S_Ag']
+                        )
+                GranBBDD['Sup_total'] = GranBBDD['Sup_total']. fillna('None')
+                GranBBDD['Coincide'] = np.where((GranBBDD['Sup_total']!= 'None'), 'Si','Bien')
+                GranBBDD = GranBBDD.loc[(GranBBDD['Coincide'] == 'Si')]
+                GranBBDD = GranBBDD.drop(['Coincide'], axis=1)
+                GranBBDD = GranBBDD.loc[GranBBDD.loc[:, 'Sup_total'] != 0]
+                GranBBDD = GranBBDD.drop(['Sup_total'], axis=1)
+
+                # Doy el uso principal del edificio, en base a la superficie del uso más grande de los bienes inmuebles del edificio
+                sup = GranBBDD.loc[:,['S_Viv', 'S_Almacen', 'S_Ind', 'S_Of', 'S_Com', 'S_Dep', 'S_Esp', 'S_Host', 'S_San', 'S_Cult', 'S_Rel', 'S_Sin', 'S_IAg', 'S_Ag']]
+                ind = np.argsort(-sup.values, axis=1)
+                uso_p = ind[:, 0]
+                GranBBDD['Uso_principal'] = pd.Series(uso_p).replace({0: 'Residencial', 1: 'Almacén-Estacionamiento', 2: 'Industrial', 
+                                                                      3: 'Oficinas', 4: 'Comercial', 5: 'Deportivo', 6: 'Espectáculos', 
+                                                                      7: 'Ocio y Hostelería', 8: 'Sanidad y Beneficencia', 9: 'Cultural', 
+                                                                      10: 'Religioso', 11: 'Edificio singular', 12: 'Industrial agrario', 
+                                                                      13: 'Agrario'
+                                                                    })
+
+                # print (df.columns)
+                GranBBDD.to_parquet(Carpeta_archivos_guardar + r"\Edificios_España_Completos_escala_BI" + "_Reducido" + ".gzip", compression='gzip', index=False)
+                GranBBDD.to_csv(Carpeta_archivos_guardar + r"\Edificios_España_Completos_escala_BI" + "_Reducido" + ".csv")
+
 
             print (GranBBDD.dtypes)
             n_edif = GranBBDD.shape[0]
