@@ -2,7 +2,11 @@ def Eliminar_errores(archivo, eliminar_errores_ReferenciaCatastral, eliminar_err
     import pandas as pd
     import numpy as np
     import xlrd 
-    df = (pd.read_excel(archivo, skiprows=0))
+
+    try:
+        df = (pd.read_excel(archivo, skiprows=0))
+    except:
+        df = (pd.read_csv(archivo, skiprows=0))
     fallos = pd.DataFrame()
 
     a = df.shape[0] # Nos da el número de filas antes de eliminar los valores erróneos

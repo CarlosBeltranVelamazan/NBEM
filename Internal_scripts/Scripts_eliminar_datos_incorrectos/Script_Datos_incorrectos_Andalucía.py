@@ -76,8 +76,8 @@ def Eliminar_errores(archivo, eliminar_errores_ReferenciaCatastral, eliminar_err
         df = df.loc[df.loc[:, 'Consumo_energía_primaria'] != 'None']
         fallos10 = df.loc[df.loc[:, 'Consumo_energía_primaria'] < 0.01]
         df = df.loc[df.loc[:, 'Consumo_energía_primaria'] >= 0.01]
-        fallos11 = df.loc[df.loc[:, 'Consumo_energía_primaria'] > 1000]
-        df = df.loc[df.loc[:, 'Consumo_energía_primaria'] <= 1000]
+        fallos11 = df.loc[df.loc[:, 'Consumo_energía_primaria'] > 629.7]         # La referencia 1 eran 1000, el paper 2 usa 629,7
+        df = df.loc[df.loc[:, 'Consumo_energía_primaria'] <= 629.7]
         fallos = pd.concat([fallos, fallos2, fallos10, fallos11], axis=0)
     j = df.shape[0]
     k = h-j
@@ -101,8 +101,8 @@ def Eliminar_errores(archivo, eliminar_errores_ReferenciaCatastral, eliminar_err
         df = df.loc[df.loc[:, 'Emisiones_CO2'] != 'None']
         fallos10 = df.loc[df.loc[:, 'Emisiones_CO2'] < 0.01]
         df = df.loc[df.loc[:, 'Emisiones_CO2'] >= 0.01]
-        fallos11 = df.loc[df.loc[:, 'Emisiones_CO2'] > 529]
-        df = df.loc[df.loc[:, 'Emisiones_CO2'] <= 529]
+        fallos11 = df.loc[df.loc[:, 'Emisiones_CO2'] > 333.1]                     # La referencia 1 usando el peor vector energético eran 529 (1000*peor vector), el paper 2 serían 333.1
+        df = df.loc[df.loc[:, 'Emisiones_CO2'] <= 333.1]
         fallos = pd.concat([fallos, fallos2, fallos10, fallos11], axis=0)
     n = df.shape[0]
     o = l-n

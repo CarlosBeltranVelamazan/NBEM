@@ -1,8 +1,12 @@
 def Eliminar_errores(archivo, eliminar_errores_ReferenciaCatastral, eliminar_errores_CP, eliminar_errores_Consumo_energía_primaria, eliminar_errores_Calificación_consumo_energía, eliminar_errores_Emisiones_CO2, eliminar_errores_Calificación_emisiones, eliminar_errores_FechaConstrucción, eliminar_errores_SuperficieUtil, ccaa):
     import pandas as pd
     import numpy as np
-    import xlrd 
-    df = (pd.read_excel(archivo, skiprows=0))
+    import xlrd
+    
+    try:
+        df = (pd.read_excel(archivo, skiprows=0))
+    except:
+        df = (pd.read_csv(archivo, skiprows=0))
     fallos = pd.DataFrame()
 
     a = df.shape[0] # Nos da el número de filas antes de eliminar los valores erróneos
