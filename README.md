@@ -28,8 +28,7 @@ Website: http://www.localregen.net/
 </p>
 
 # Project Status:
-Released, development ongoing. Currently, we are fine-tuning the code for better comprehension, and we will be releasing the complete updated code as soon as possible.
-For any suggestions, questions, or inquiries about the code, its usage, or the model, please feel free to send a mail to cbeltran@unizar.es
+Released, development ongoing. For any suggestions, questions, or inquiries about the code, its usage, or the model, please feel free to send a mail to cbeltran@unizar.es
 
 ## Data input needed:
 Energy Performance Certificates (EPCs), INSPIRE Cadastre files, and Alphanumeric Cadastre files. EPC data and INSPIRE Cadastre files can be downloaded automatically by the repository code, while alphanumeric cadastral data must be manually downloaded from the cadastral electronic headquarters province by province (see the notes in the main.py file for the respective sections).
