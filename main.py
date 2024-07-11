@@ -38,7 +38,7 @@ In each step, the notes include the recommended configuration to generate the mo
 To handle the model, some python libraries are needed, see requirements.txt file. To install the libraries execute "pip install -r requirements.txt".
 """
 
- # Step 0 - Select the scale of the model
+ # Step 0 - Select the scale of the model and create the necessary folders
  # First of all, we must choose the scale of the model, national scale (Spain) or a single Autonomous Community (AC).
  # A value to the variable called CCAA must be givben, that value corresponds to the following switch switch_CCAA to select the country scale (Spain is the value 0)
  # or a single Autonomous Community (values 1 to 19). All the Autonomous Communities and autonomous cities are included to provide the data,
@@ -69,30 +69,23 @@ switch_CCAA = {
     19: 'Melilla',
     }
 
-# Step A.0, Create folders to store the data - Just the first time, will create the structure of folders to or contain the input data or the steps or the output
-                                                                          # The neccesary folders are:
-        # Internal scripts: Contains the code to generate the model
-        # Folders for the Step A.1 Energy Performance Certificates (EPC)
-folder_read_EPC = r'Downloaded_EPC_databases'                             # The folder where the files of the EPCs will be read from and if the download option is chosen the EPCs files will be saved 
-folder_save_EPC_modificed = r'Modified_EPC_Databases'                     # The folder where the generated files will be saved
-        # Folders for the Step A.2 Alphanumeric cadastre
-folder_read_Alphanumeric_cadastre = r'Alphanumeric_cadastre'              # The folder to store the zip files from the Alphanumeric Cadastre
-        # Folders for the Step A.3 INSPIRE cadastre
-folder_INSPIRE = r'INSPIRE_cadastre'                                      # The folder with all the data and models from the INSPIRE Cadastre
-folder_txt_INSPIRE = r'INSPIRE_cadastre\Original_txt_links'               # Additional feature: It allows updating the download links for the Inspire cadastre that will be used by the algorithm, contains the raw text of the webs with the links.
-folder_INSPIRE_links = r'INSPIRE_cadastre\Automated_links'                # Contains the txt with the links to the INSPIRE Cadastre ready to download
-folder_download_INSPIRE_zips = r'INSPIRE_cadastre\INSPIRE_files'          # Contains the downloaded INSPIRE Cadastre zips
-        # Folders for the Step A.4 Others
-folder_Additional_Information = r'Additional_Information'                 # Includes supplementary data to enhance the model, including climate zones map or the population residing in each municipality.
-        # Folders for the Step B.1 Energy performance model
-b1_output = r'Energy_performance_model'                                   # Contains the B.1 step outputs
-        # Folders for the Step B.2 National enhanced building stock GIS model
-b2_output = r'National_enhanced_building_stock_GIS_model'                 # Contains the B.2 step outputs
-        # Folders for the Step B.3 National enhanced building stock GIS model
-b3_output = r'National-scale_EPC-based_Building_Energy_Model'             # Contains the B.3 step outputs (the final file of the entire process)
+# Step 0, Create folders to store the data - Just the first time, will create the structure of folders to or contain the input data or the steps or the output
+                                                                        # The neccesary folders are:
+                                                                        # Folder Internal scripts: Contains the code to generate the model
+folder_read_EPC = r'Downloaded_EPC_databases'                           # Step A.1 - The folder where the files of the EPCs will be read from and if the download option is chosen the EPCs files will be saved 
+folder_save_EPC_modificed = r'Modified_EPC_Databases'                   # Step A.1 - The folder where the generated files will be saved
+folder_read_Alphanumeric_cadastre = r'Alphanumeric_cadastre'            # Step A.2 - The folder to store the zip files from the Alphanumeric Cadastre
+folder_INSPIRE = r'INSPIRE_cadastre'                                    # Step A.3 - The folder with all the data and models from the INSPIRE Cadastre
+folder_txt_INSPIRE = r'INSPIRE_cadastre\Original_txt_links'             # Step A.3 - Additional feature: It allows updating the download links for the Inspire cadastre that will be used by the algorithm, contains the raw text of the webs with the links.
+folder_INSPIRE_links = r'INSPIRE_cadastre\Automated_links'              # Step A.3 - Contains the txt with the links to the INSPIRE Cadastre ready to download
+folder_download_INSPIRE_zips = r'INSPIRE_cadastre\INSPIRE_files'        # Step A.3 - Contains the downloaded INSPIRE Cadastre zips
+folder_Additional_Information = r'Additional_Information'               # Step A.4 - Includes supplementary data to enhance the model, including climate zones map or the population residing in each municipality.
+b1_output = r'Energy_performance_model'                                 # Step B.1 - Contains the B.1 step outputs
+b2_output = r'National_enhanced_building_stock_GIS_model'               # Step B.2 - Contains the B.2 step outputs
+b3_output = r'National-scale_EPC-based_Building_Energy_Model'           # Step B.3 - Contains the B.3 step outputs (the final file of the entire process)
 
-Step_A_0 = True     # Create folders to store the data
-if Step_A_0:
+Step_0 = True     # Create folders to store the data
+if Step_0:
     import os
     os.makedirs(folder_read_EPC, exist_ok=True)
     os.makedirs(folder_save_EPC_modificed, exist_ok=True)
