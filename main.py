@@ -88,7 +88,7 @@ b2_output = r'National_enhanced_building_stock_GIS_model'                 # Cont
 b3_output = r'National-scale_EPC-based_Building_Energy_Model'             # Contains the B.3 step outputs (the final file of the entire process)
 
 Step_A_0 = True     # Create folders to store the data
-if Step_A_0 == True:
+if Step_A_0:
     import os
     os.makedirs(folder_read_EPC, exist_ok=True)
     os.makedirs(folder_save_EPC_modificed, exist_ok=True)
@@ -99,8 +99,8 @@ if Step_A_0 == True:
     os.makedirs(folder_Additional_Information, exist_ok=True)
 
 # Step A.1, Management of EPC in python - To use this step mark the variable Step_A_1 as True and provide the rest of the information required. Please see notes below.
-Step_A_1 = False
-if Step_A_1 == True:
+Step_A_1 = True
+if Step_A_1:
     from Internal_scripts import A_Script_clave
 
     Download_EPCs_DDBB = True                               # Step A.1.1. Download the data from the public EPCs Databases (True or False) (see notes below)
@@ -144,6 +144,9 @@ if Step_A_1 == True:
         
         4 - Step A.1.1. Download the data from the public EPCs Databases:
             The script to download the databases of the EPCs cannot download all of them, this is the list of exceptions:
+                - Over time, those responsible for providing this data change the formats, encodings, and methods of obtaining the information. 
+                This step is automated but carries the highest risk of quickly becoming outdated. 
+                It is recommended to supervise that all the desired data is downloaded or manually download the information and proceed with the rest of the code automatically.
                 - In the AC (Autonomous Community) of Asturias there is a problem with a protocol because the website is old, you have to use Internet explorer to download the file.
                 To download the Asturias Database go to: https://datos.gob.es/es/catalogo/a03002951-eficiencia-energetica-edif-viv
                 - The AC of Galicia has a capcha of I am not a robot and as I am a robot prefer to not automate it.
@@ -176,8 +179,8 @@ if Step_A_1 == True:
     """
 
 # Step A.2, Alphanumeric cadastre - To use this step mark the variable Step_A_2 as True and provide the rest of the information required. Please see notes below.
-Step_A_2 = False
-if Step_A_2 == True:
+Step_A_2 = True
+if Step_A_2:
     from Internal_scripts import E_Script_clave
     import os
     # This step will generate a database with all the buildings in Spain with the information contained in the alphanumeric cadastre.
@@ -315,8 +318,8 @@ if Step_A_2 == True:
     """
 
 # Step A.3, INSPIRE cadastre - To use this step mark the variable Step_A_3 as True and provide the rest of the information required. Please see notes below.
-Step_A_3 = False
-if Step_A_3 == True:
+Step_A_3 = True
+if Step_A_3:
     # This step will generate a GIS map with all the buildings in Spain with the information contained in the INSPIRE cadastre. This information is provided at the building scale (14-digit cadastral reference).
 
     # Step A.3.1. Download the INSPIRE cadastre data. This step is divided in four parts:
@@ -336,7 +339,7 @@ if Step_A_3 == True:
     
     encoding_txt = 'utf-8'  # As a recommendation, use 'utf-8', in some cases also 'latin-1' is useful. There are some problems with spanish and catalan letters in the links.
     Step_A_3_1_Part_1 = True
-    if Step_A_3_1_Part_1  == True:
+    if Step_A_3_1_Part_1:
         from Internal_scripts.B_Scripts_Catastro_INSPIRE import Update_download_links
         Update_download_links.Automate_links (folder_txt_INSPIRE, folder_INSPIRE_links, encoding_txt)
 
@@ -348,27 +351,27 @@ if Step_A_3 == True:
             # Additionally, in the console, it will display whether each link has been downloaded successfully or the download error.
         
     Step_A_3_1_Part_2 = True
-    if Step_A_3_1_Part_2  == True:
+    if Step_A_3_1_Part_2:
         from Internal_scripts.B_Scripts_Catastro_INSPIRE import Download_INSPIRE_files
         Download_INSPIRE_files.Download_files (folder_INSPIRE_links, folder_download_INSPIRE_zips, encoding_txt)
 
         # Part 3: Unzip the data. The ZIP files for each province are being decompressed.
     Step_A_3_1_Part_3 = True
-    if Step_A_3_1_Part_3  == True:
+    if Step_A_3_1_Part_3:
         from Internal_scripts.B_Scripts_Catastro_INSPIRE import Unzip_INSPIRE
         Unzip_INSPIRE.Unzip (folder_download_INSPIRE_zips)
 
         # Part 4: Delete the files we do not wish to keep.
             # The uncompressed information takes up a lot of space, that's why, since we are only going to use the 'building.gml' layer, it is recommended to delete the unused layers (buildingpart, otherconstruction, and the XML).
     Step_A_3_1_Part_4 = True
-    if Step_A_3_1_Part_4  == True:
+    if Step_A_3_1_Part_4:
         from Internal_scripts.B_Scripts_Catastro_INSPIRE import Delete_buildingpart_and_other_constructions
         Delete_buildingpart_and_other_constructions.Delete_non_used_files (folder_download_INSPIRE_zips)
 
     # Step A.3.2. Merge the files into a single geoparquet file
             # If preferred, this step can be done in QGIS using the Merge Vector Layers tool.
     Step_A_3_2 = True
-    if Step_A_3_2  == True:
+    if Step_A_3_2:
         Coordinate_Reference_System = 'EPSG:25830'          # The standard crs in Spain is ETRS89 / UTM Zone 30N, EPSG:25830. Part of the info is on 'ETRS89 / UTM zone 31N', 'ETRS89 / UTM zone 29N' and REGCAN95 for the Cannary Islands and must be transformed into a common crs.
         drop_duplicates = True                              # At times, the cadastral data may include duplicated buildings; it is advisable to treat them as errors and remove them. This process will eliminate all buildings with two or more entries sharing the same cadastral reference (14 digits).
         drop_unused_columns = True                          # Result Step A.3. Eliminate from the INSPIRE cadastre result files the columns that are not necessary to reduce the file size
@@ -425,8 +428,8 @@ if Step_A_3 == True:
 # Step B, Model generation
     
 # Step B.1, Energy performance model
-Step_B_1 = False
-if Step_B_1 == True:
+Step_B_1 = True
+if Step_B_1:
     # In this section, the information from the EPCs (Energy Performance Certificates) is merged with the alphanumeric cadastre, filtered and analysed.
     from Internal_scripts import A_7_3_Prepara_EPC_edif_BI
     from Internal_scripts import A_8_Combina_parquet_EPC_edif_BI_cat_alfanum
@@ -446,13 +449,13 @@ if Step_B_1 == True:
     # from Internal_scripts import Z_5_Combina_EPC_edif_BI_sin_agrupar_por_edificio  # Optional, combines EPC and alphanumeic cadaster at building unit scale (without group by building)
 
 # Step B.2, National enhanced building stock GIS model
-Step_B_2 = False
-if Step_B_2 == True:
+Step_B_2 = True
+if Step_B_2:
     # In this section, the information from the INSPIRE Cadastre is merged with the alphanumeric cadastre, the climate zones map and the type of municipality
     os.makedirs(b2_output, exist_ok=True)
     # Step B.2.1, Assign Climate zone to buildings
     Step_B_2_1 = True
-    if Step_B_2_1 == True:
+    if Step_B_2_1:
       # Note: the assignment of climatic zones can be done building by building with a spatial union with the INSPIRE cadastre or if the climatic zones 
       # have been calculated by municipality, it can be joined by municipality code between the map of climatic zones and the alphanumeric cadastre.
         climate_zone_map = r'Additional_Information\Municipios de España con su Zonas climática.csv' # The path to the climate zones map (step A.4)
@@ -465,7 +468,7 @@ if Step_B_2 == True:
     # Step B.2.2, Assign type of municipality. Combine alphanumerical cadastre and the population census by municipality to know what type of municipality the building is located in (rural or urban)
     # This step updates the input file by adding the indicated column, interrupting this step may cause the file to be corrupted.
     Step_B_2_2 = True
-    if Step_B_2_2 == True:
+    if Step_B_2_2:
         from Internal_scripts import G_1_2_Municipio_Rural_o_Urbano_Catastro_Alfanumerico_parquet
         population_census = r'Additional_Information\pobmun22.xlsx'
         Alphanumeric_buildings = r'National_enhanced_building_stock_GIS_model\Buildings_with_climate_zones.gzip'
@@ -473,7 +476,7 @@ if Step_B_2 == True:
 
     # Step B.2.3, Union of cadastres. Combine INSPIRE and alphanumerical cadastre
     Step_B_2_3 = True
-    if Step_B_2_3 == True:
+    if Step_B_2_3:
 
         # The path to the INSPIRE and alphanumeric cadastres (step A.2 and A.3) (remember to use the data from the cadastre with the climatic zone from the previous step)
         INSPIRE_buildings = r'INSPIRE_cadastre\GIS_INSPIRE_Buildings_v2.parquet' # The path to the INSPIRE cadastre (step A.2) or the INSPIRE with climate zones (step B.2.1)
@@ -487,7 +490,7 @@ if Step_B_2 == True:
         # If the desired objective is tabular information, it can be obtained in Parquet or CSV format with all the details. 
         # This outcome may be more practical depending on the use, as the reading time and file size are significantly reduced compared to a GIS map.
         Tabular_data = True
-        if Tabular_data == True:
+        if Tabular_data:
             G_1_Uno_parquet_INSPIRE_y_Alfanumerico.combine_cadastres (INSPIRE_buildings, Alphanumeric_buildings, b2_output, B_2_model_name)
 
     # Part 2: GIS map
@@ -495,12 +498,12 @@ if Step_B_2 == True:
         # This step can be performed in two ways: "inner" (only buildings with EPCs will be generated) and "left" (a map with all buildings in Spain will be generated, and EPC information will be added for buildings with at least one certificate).
         # from Internal_scripts import G_12_Uno_geoparquet_Edif_España_y_CEE
         GIS_data = True
-        if GIS_data == True:
+        if GIS_data:
             G_1_Uno_parquet_INSPIRE_y_Alfanumerico.combine_cadastres_GIS (INSPIRE_buildings, Alphanumeric_buildings, b2_output, B_2_model_name)
 
 # Step B.3, National-scale EPC-based Building Energy Model
-Step_B_3 = False
-if Step_B_3 == True:
+Step_B_3 = True
+if Step_B_3:
     os.makedirs(b3_output, exist_ok=True)
     from Internal_scripts import G_2_Uno_parquet_INSPIRE_Alfanumerico_y_CEE
 
@@ -511,13 +514,13 @@ if Step_B_3 == True:
 
     # Part 1: Tabular data
     Tabular_data = True
-    if Tabular_data == True:
+    if Tabular_data:
         G_2_Uno_parquet_INSPIRE_Alfanumerico_y_CEE.combine_cadastres_with_EPCs (cadastres_files, EPC_files, b3_output, B_3_model_name)
 
     # Part 2: GIS map
     GIS_data = True
-    if GIS_data == True:
+    if GIS_data:
         G_2_Uno_parquet_INSPIRE_Alfanumerico_y_CEE.combine_cadastres_with_EPCs_GIS (cadastres_files, EPC_files, b3_output, B_3_model_name)
 
-print ('All active steps have been completed.')
 
+print ('All active steps have been completed.')
