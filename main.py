@@ -20,9 +20,13 @@ and the internal steps that we want to perform must be defined. Please pay atten
 As the process is executed, folders will be created with the information generated.
 
  Data management and Model generation steps:
-      - A.1: Management of EPCs in python
-      - A.2: Alphanumeric cadastre
-      - A.3: INSPIRE cadastre
+        - A.1: Management of EPCs in python
+        - A.2: Alphanumeric cadastre
+        - A.3: INSPIRE cadastre
+        - A.4: Others
+        - B.1: Energy performance model
+        - B.2: National enhanced building stock GIS model
+        - B.3: National-scale EPC-based Building Energy Model
 
                                                         HOW TO MANAGE THE MODEL
 
